@@ -1,38 +1,89 @@
-.onboarding-container {
+
+.onboarding-page {
   background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
   min-height: 100vh;
-  padding: 2rem;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: white;
+  padding: 2rem;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+.onboarding-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 2rem;
   border-radius: 16px;
-  max-width: 800px;
+  max-width: 1100px;
   width: 100%;
-  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 1.2s ease;
 }
 
-.overlay h1 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+.animated-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.overlay ol {
+.tagline {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.25rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.4);
+}
+
+.card-content {
   margin-top: 1rem;
-  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #eaeaea;
 }
 
-.overlay p {
-  line-height: 1.6;
+.next-steps {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #666;
+}
+
+.next-steps h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.next-steps ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.next-steps a {
+  color: #4dd0e1;
+  text-decoration: underline;
 }
 
 button {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   background-color: #007bff;
@@ -45,4 +96,9 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

@@ -1,22 +1,21 @@
 import React from 'react';
 import './Home.css';
+import { useNavigate } from 'react-router-dom';
+import logo from '../assets/main-logo-ace.png'; // Make sure your logo is placed in src/assets/
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="home-container">
-      <h1 className="title">ACE HIRES</h1>
-      <div className="card-grid">
-        <div className="card" onClick={() => window.location.href='/apply'}>
-          <h2>Apply as a Consultant</h2>
-        </div>
-        <div className="card" onClick={() => window.location.href='/education'}>
-          <h2>Trainings and Education</h2>
-        </div>
-        <div className="card" onClick={() => window.location.href='/onboarding'}>
-          <h2>Onboarding</h2>
-        </div>
-        <div className="card" onClick={() => window.location.href='/services'}>
-          <h2>Services / Vision & Mission</h2>
+    <div className="home-hero">
+      <div className="home-overlay">
+        <img src={logo} alt="ACE Compliance Logo" className="home-logo" />
+        <h1 className="home-title">ACE HIRES</h1>
+        <div className="home-buttons">
+          <button onClick={() => navigate('/apply')}>Apply as a Consultant</button>
+          <button onClick={() => navigate('/education')}>Trainings and Education</button>
+          <button onClick={() => navigate('/onboarding')}>Onboarding</button>
+          <button onClick={() => navigate('/services')}>Services / Vision & Mission</button>
         </div>
       </div>
     </div>

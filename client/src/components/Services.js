@@ -9,11 +9,45 @@ const Services = () => {
     <div className="services-container">
       <div className="overlay">
         <h1>Services & Vision</h1>
-        <p>
-          ACE Compliance Consulting offers tailored services for healthcare providers and individuals
-          seeking expert support in compliance and licensing processes.
-        </p>
+        <p className="tagline">Succeed • Grow • Thrive</p>
 
+        {/* About, Mission, Vision, Core Values */}
+        <div className="info-section">
+          <div className="info-card">
+            <h3>About Us</h3>
+            <p>
+              Ace Compliance Consulting is the source for growth and expansion into the best version of yourself.
+              It’s the playground where people do complete work that is effective, efficient, and meaningful.
+            </p>
+          </div>
+
+          <div className="info-card">
+            <h3>Our Mission</h3>
+            <p>
+              We assist home care agency owners to achieve success, operate with peace of mind, and focus on patient care.
+            </p>
+          </div>
+
+          <div className="info-card">
+            <h3>Our Vision</h3>
+            <p>
+              We are the tipping point for an ever-increasing number of home care agency owners nationwide to achieve success,
+              operate with peace of mind, and focus on patients care.
+            </p>
+          </div>
+
+          <div className="info-card">
+            <h3>Our Core Values</h3>
+            <ul>
+              <li><strong>Effective:</strong> Masters at producing results</li>
+              <li><strong>Efficient:</strong> Impeccable time management with precision</li>
+              <li><strong>Integrity:</strong> Possibility that fuels workability</li>
+              <li><strong>Success:</strong> All we do is win and achieve success</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Your original service cards section stays here */}
         <div className="services-grid">
           <div className="service-card">
             <h3>📋 PAS Licensing Support</h3>
