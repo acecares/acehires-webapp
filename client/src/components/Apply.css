@@ -1,0 +1,120 @@
+.apply-container {
+  background: url('https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.apply-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65); /* dark overlay */
+  z-index: 1;
+}
+
+.apply-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.apply-container h1, .myh2class{
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 6px black;
+}
+
+.card-section {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.apply-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #017f57;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 280px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  color: white;
+}
+
+.apply-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.apply-card h3 {
+  font-size: 1.4rem;
+  color: #90caf9;
+  margin-bottom: 0.5rem;
+}
+
+.note-box {
+  background: #fffbe6;
+  color: #333;
+  padding: 1rem;
+  border-left: 6px solid #017f57;
+  margin: 2rem auto;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.pdf-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.pdf-button {
+  background-color: #017f57;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+  background-color: #017f57;
+}
+
+.next-steps {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #666;
+}
+
+.next-steps h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.next-steps ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.next-steps a {
+  color: #4dd0e1;
+  text-decoration: underline;
+}

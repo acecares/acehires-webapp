@@ -1,67 +1,43 @@
-.home-hero {
-  background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
-  height: 100vh;
+
+.home-container {
+  background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1650&q=80') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
-}
-
-.home-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2.5rem;
-  border-radius: 16px;
-  text-align: center;
   color: white;
-  max-width: 650px;
-  animation: fadeIn 1.2s ease;
+  font-family: Arial, sans-serif;
 }
 
-.home-logo {
-  max-width: 180px;
-  height: auto;
-  margin-bottom: 1rem;
-  animation: logoPop 0.8s ease-out;
-}
-
-.home-title {
-  font-size: 2.75rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.home-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.home-buttons button {
-  padding: 1rem;
-  font-size: 1rem;
-  background-color: #1e88e5;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.home-buttons button:hover {
-  background-color: #1565c0;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes logoPop {
-  from { transform: scale(0.7); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
+  
+  .title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+  
+  .card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+  }
+  

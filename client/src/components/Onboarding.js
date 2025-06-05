@@ -62,13 +62,7 @@ const Onboarding = () => {
         </div>
 
         <div className="next-steps">
-          <h2>Next Steps in Your Onboarding</h2>
-          <ul>
-            <li>📅 <a href="https://calendly.com/your-interview-link" target="_blank" rel="noopener noreferrer">Schedule Your Interview</a></li>
-            <li>🎓 <a href="https://yourtrainingportal.com" target="_blank" rel="noopener noreferrer">Access Compliance Courses</a></li>
-            <li>📥 Receive internal training via email from admin</li>
-            <li>🤝 Contact <a href="mailto:support@acecompliance.org" rel="noopener noreferrer">support@acecompliance.org</a> for help</li>
-          </ul>
+          
           <button onClick={() => navigate('/')}>⬅ Back to Home</button>
         </div>
       </div>
