@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./RolePage.css";
+import TermsModal from "../components/TermsModal";
 
 const SuccessConsultantPage = () => {
   const navigate = useNavigate();
+  const [agreed, setAgreed] = useState(false);
+
   return (
     <div className="role-page">
-      <div className="content">
-        <h1>Success Consultant</h1>
-        <p>Welcome to the Success Consultant role onboarding page.</p>
-        <button onClick={() => navigate(-1)}>⬅ Go Back</button>
-      </div>
+      {!agreed && <TermsModal onAgree={() => setAgreed(true)} />}
+      {agreed && (
+        <div className="content">
+          <h1>Success Consultant</h1>
+          <p>Welcome to the Success Consultant role onboarding page.</p>
+          <button onClick={() => navigate(-1)}>⬅ Go Back</button>
+        </div>
+      )}
     </div>
   );
 };

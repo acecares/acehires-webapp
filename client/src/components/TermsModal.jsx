@@ -1,39 +1,28 @@
 import React, { useState } from 'react';
 import './TermsModal.css';
 
-const TermsModal = ({ onAgree }) => {
-  const [checked, setChecked] = useState(false);
-
-  const handleCheckboxChange = () => {
-    setChecked(!checked);
-  };
+const TermsModal = ({ onAgree, title = 'Terms & Conditions', terms = [] }) => {
+  const [isChecked, setIsChecked] = useState(false);
+  const defaultTerms = [
+    "🔒 Confidentiality is strictly required.",
+    "🚫 No sharing of proprietary training material.",
+    "✅ You acknowledge all onboarding instructions.",
+  ];
+  const termsToShow = terms.length ? terms : defaultTerms;
 
   return (
     <div className="terms-modal-overlay">
       <div className="terms-modal">
-        <h2>Terms & Conditions</h2>
-        <p>Welcome to ACE Compliance Consulting. Before continuing, please agree to the following terms:</p>
+        <h2>{title}</h2>
+        <p>Before continuing, please agree to the following terms:</p>
         <ul>
-          <li>🔒 Confidentiality is strictly required.</li>
-          <li>🚫 No sharing of proprietary training material.</li>
-          <li>✅ You acknowledge all onboarding instructions.</li>
+          {termsToShow.map((term, i) => <li key={i}>{term}</li>)}
         </ul>
-
         <div className="checkbox-section">
-          <input
-            type="checkbox"
-            id="agree-checkbox"
-            checked={checked}
-            onChange={handleCheckboxChange}
-          />
-          <label htmlFor="agree-checkbox"> I Agree & Continue</label>
+          <input type="checkbox" id="agree" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+          <label htmlFor="agree"> I Agree & Continue</label>
         </div>
-
-        <button
-          className="agree-button"
-          onClick={onAgree}
-          disabled={!checked}
-        >
+        <button className="agree-button" disabled={!isChecked} onClick={onAgree}>
           ✅ Agree & Continue
         </button>
       </div>
