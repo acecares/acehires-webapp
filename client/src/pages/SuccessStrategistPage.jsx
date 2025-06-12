@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import TermsModal from "../components/TermsModal"; // your modal
 
 const SuccessStrategistPage = () => {
@@ -22,7 +23,7 @@ const SuccessStrategistPage = () => {
           <p>Welcome to the Success Strategist role onboarding page.</p>
 
           <div style={{ height: "700px", width: "100%", borderRadius: "8px", overflow: "hidden", marginTop: "20px" }}>
-            <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}>
+            <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
               <Viewer fileUrl="/Application_Employee_Part_1.pdf" />
             </Worker>
           </div>
