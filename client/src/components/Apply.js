@@ -13,15 +13,20 @@ const Apply = () => {
       <h1>Apply Now</h1>
 
       <div className="card-section">
-        <div className="apply-card" onClick={() => navigate('/apply/ConsultantApply')}>
-          <h3>Apply as a Consultant</h3>
-          <p>For contractors or consultants looking to join our team</p>
-        </div>
-
         <div className="apply-card" onClick={() => navigate('/apply/applicant')}>
           <h3>Apply as an Applicant</h3>
           <p>For direct employment or client-side job positions</p>
         </div>
+        <div className="apply-card" onClick={() => navigate('/apply/ConsultantApply')}>
+          <h3>Apply as a Consultant</h3>
+          <p>For contractors or consultants looking to join our team</p>
+        </div>
+        <div className="apply-card" onClick={() => navigate('/apply/ConsultantApply')}>
+          <h3>Apply as a Coach</h3>
+          <p>Help guide individuals toward success by sharing your expertise and experience.</p>
+        </div>
+
+        
       </div>
 
       <div className="note-box">
