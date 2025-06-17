@@ -13,11 +13,11 @@ const SuccessStrategistPage = () => {
   const handleAgree = () => setAgreed(true);
 
   const documents = [
-    { id: "operations", label: "Operations", file: "/Application_Employee_Part_1.pdf" },
-    { id: "onboarding", label: "Onboarding", file: "/Application_Employee_Part_2.pdf" },
-    { id: "communications", label: "Communications", file: "/Application_Employee_Part_3.pdf" },
-    { id: "employeePanel", label: "Employee Panel", file: "/Application_Employee_Part_4.pdf" },
-    { id: "agreements", label: "Agreement & Contracts", file: "/Application_Employee_Part_5.pdf" },
+    { id: "onboarding", label: "Onboarding Form", file: "/Application_Employee_Part_1.pdf" },
+    { id: "handbook", label: "Employee Handbook", file: "/Application_Employee_Part_2.pdf" },
+    { id: "compliance", label: "Compliance Guide", file: "/Application_Employee_Part_3.pdf" },
+    { id: "training", label: "Training Overview", file: "/Application_Employee_Part_4.pdf" },
+    { id: "policy", label: "Policy Agreement", file: "/Application_Employee_Part_5.pdf" },
   ];
 
   const selectedFile = documents.find(doc => doc.id === visibleDoc)?.file || "";
@@ -65,13 +65,15 @@ const SuccessStrategistPage = () => {
   );
 };
 
+// --- 💅 Clean & Condensed Styles ---
 const styles = {
   page: {
     minHeight: "100vh",
     backgroundColor: "#f8f9fc",
     display: "flex",
     justifyContent: "center",
-    padding: "24px 12px 40px",
+    paddingTop: "20px",
+    paddingBottom: "40px",
   },
   card: {
     backgroundColor: "#fff",
@@ -85,20 +87,20 @@ const styles = {
     fontSize: "28px",
     fontWeight: "600",
     textAlign: "center",
-    marginBottom: "8px",
+    marginBottom: "6px",
     color: "#222",
   },
   subheading: {
     fontSize: "15px",
     textAlign: "center",
-    marginBottom: "20px",
+    marginBottom: "22px",
     color: "#555",
   },
   buttonGrid: {
     display: "grid",
     gridTemplateColumns: "1fr",
     gap: "10px",
-    marginBottom: "16px",
+    marginBottom: "20px",
   },
   button: {
     padding: "12px 18px",
@@ -120,11 +122,11 @@ const styles = {
     height: "650px",
     borderRadius: "6px",
     overflow: "hidden",
-    marginTop: "10px",
+    marginTop: "16px",
     border: "1px solid #e0e0e0",
   },
   backButton: {
-    marginTop: "24px",
+    marginTop: "25px",
     padding: "10px 20px",
     fontSize: "14px",
     fontWeight: "500",
