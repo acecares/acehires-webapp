@@ -92,7 +92,7 @@ button:hover {
     url("/public/diverse-people-working-office.jpg") no-repeat center
       center/cover;
   min-height: 100vh;
-  padding: 40px;
+  padding: 40px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -123,15 +123,9 @@ button:hover {
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Center the last card if it's alone in a row */
-.role-card:last-child:nth-child(7) {
-  grid-column: 2 / span 1;
 }
 
 .role-card:hover {
@@ -176,31 +170,38 @@ button:hover {
   transform: scale(1.05);
 }
 
+/* Modal Styling */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#00000080, #00000080),
-    url("/public/auth.jpg") no-repeat center center/cover;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
+  padding: 20px;
 }
 
 .modal {
   background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
+  padding: 30px 20px;
   border-radius: 12px;
   backdrop-filter: blur(12px);
   text-align: center;
+  width: 100%;
   max-width: 400px;
-  width: 90%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
 }
+
+.modal h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
 
 .modal input {
   padding: 10px;
@@ -214,17 +215,20 @@ button:hover {
 .modal-actions {
   margin-top: 20px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .modal-actions button {
-  padding: 0 12px;
+  font-size: 1rem;
+  padding: 10px 16px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 6px;
   border: none;
   transition: all 0.3s ease;
+  min-width: 140px;
 }
 
 .modal-actions .cancel {
@@ -242,35 +246,70 @@ button:hover {
   margin-top: 10px;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+  }
 
+  .role-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 
-/* Responsive Media Queries */
-@media (max-width: 1024px) {
-  body, .container {
-    padding: 1rem;
+  .role-card {
+    padding: 20px;
+  }
+
+  .modal {
+    padding: 24px 16px;
+    max-width: 100%;
+  }
+
+  .modal h2 {
     font-size: 1rem;
   }
-  img, video {
-    max-width: 100%;
-    height: auto;
-  }
-}
 
-@media (max-width: 600px) {
-  .container, .card, .section, .content {
-    flex-direction: column !important;
-    width: 100% !important;
-    font-size: 0.9rem !important;
-    padding: 0.5rem !important;
+  .modal input {
+    font-size: 0.95rem;
   }
 
-  h1, h2, h3 {
-    font-size: 1.2rem !important;
-  }
-
-  nav, header, footer {
+  .modal-actions {
     flex-direction: column;
-    text-align: center;
+    gap: 12px;
+  }
+
+  .modal-actions button {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 100%;
+    min-width: auto;
   }
 }
 
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 20px 16px;
+  }
+
+  .modal h2 {
+    font-size: 1rem;
+  }
+
+  .modal input {
+    font-size: 0.95rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-actions button {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 100%;
+    min-width: unset;
+  }
+}
