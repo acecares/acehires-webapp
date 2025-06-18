@@ -1,56 +1,48 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import './ApplicantApply.css';
 
 const ApplicantApply = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    address: '',
-    city: '',
-    state: '',
-    zip: '',
-    licenseNumber: '',
-    licenseType: '',
-    serviceAreas: '',
-    certifications: '',
-    experience: '',
-    availability: '',
-    hasBackgroundCheck: '',
-    additionalInfo: ''
-  });
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
 
-  const handleChange = e => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    alert('Form submitted (this is a placeholder for backend submission).');
-  };
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
-    <div className="Applicant-form-container">
-      <h1>Applicant Application</h1>
-      <form onSubmit={handleSubmit}>
-        <input name="fullName" placeholder="Full Name" value={formData.fullName} onChange={handleChange} required />
-        <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-        <input name="phone" type="tel" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required />
-        <input name="address" placeholder="Address" value={formData.address} onChange={handleChange} />
-        <input name="city" placeholder="City" value={formData.city} onChange={handleChange} />
-        <input name="state" placeholder="State" value={formData.state} onChange={handleChange} />
-        <input name="zip" placeholder="ZIP Code" value={formData.zip} onChange={handleChange} />
-        <input name="licenseNumber" placeholder="Professional License Number" value={formData.licenseNumber} onChange={handleChange} />
-        <input name="licenseType" placeholder="License Type (RN, LVN, CNA, etc.)" value={formData.licenseType} onChange={handleChange} />
-        <input name="serviceAreas" placeholder="Service Areas (cities or zip codes)" value={formData.serviceAreas} onChange={handleChange} />
-        <input name="certifications" placeholder="Certifications (e.g., CPR, HIPAA, OSHA)" value={formData.certifications} onChange={handleChange} />
-        <textarea name="experience" placeholder="Describe your experience in Medicare/Medicaid consulting or care" value={formData.experience} onChange={handleChange}></textarea>
-        <input name="availability" placeholder="Availability (e.g., Weekdays, Weekends, Evenings)" value={formData.availability} onChange={handleChange} />
-        <input name="hasBackgroundCheck" placeholder="Do you have a valid background check? (Yes/No)" value={formData.hasBackgroundCheck} onChange={handleChange} />
-        <textarea name="additionalInfo" placeholder="Any additional information" value={formData.additionalInfo} onChange={handleChange}></textarea>
-        <button type="submit">Submit Application</button>
-      </form>
+    <div className="applicant-container">
+      <div className="applicant-header">
+        <img src="/main-logo.png" alt="ACE Logo" className="ace-logo" />
+        <h1 className="apply-title">Apply as an Applicant</h1>
+      </div>
+
+      <div className="form-wrapper">
+        <iframe
+          id="inline-TYJoPRy60LQVXVol3ckH"
+          src="https://api.leadconnectorhq.com/widget/form/TYJoPRy60LQVXVol3ckH"
+          style={{
+            width: '100%',
+            height: '1954px',
+            border: 'none',
+            borderRadius: '4px',
+          }}
+          data-layout='{"id":"INLINE"}'
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Applicant Hiring Form – ACE"
+          data-layout-iframe-id="inline-TYJoPRy60LQVXVol3ckH"
+          data-form-id="TYJoPRy60LQVXVol3ckH"
+          title="Applicant Hiring Form – ACE"
+        ></iframe>
+      </div>
     </div>
   );
 };

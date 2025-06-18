@@ -54,6 +54,58 @@ button:hover {
 }
 
 
+.applicant-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.applicant-container img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.applicant-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.form-embed-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 0;
+}
+
+.applicant-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ace-logo {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.apply-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  min-height: 2100px; /* Adjust if needed */
+}
 
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
@@ -84,3 +136,4 @@ button:hover {
     text-align: center;
   }
 }
+
