@@ -2,85 +2,53 @@
   background: url("https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1600&q=80")
     no-repeat center center/cover;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
 
+.consultant-form-container img.ace-logo {
+  width: 160px;
+  margin-bottom: 1rem;
+}
+
 .consultant-form-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1c1c1c;
   margin-bottom: 2rem;
-  color: white;
-  text-shadow: 1px 1px 4px black;
+  text-align: center;
 }
 
-form {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 600px;
+.form-container {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-input,
-textarea {
-  padding: 0.75rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-textarea {
-  min-height: 100px;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
+  max-width: 960px;
+  background-color: #ffffff;
   padding: 1rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-  background-color: #0056b3;
+/* Make iframe responsive */
+.form-container iframe {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
 }
 
-
-
-/* Responsive Media Queries */
-@media (max-width: 1024px) {
-  body, .container {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-  img, video {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .container, .card, .section, .content {
-    flex-direction: column !important;
-    width: 100% !important;
-    font-size: 0.9rem !important;
-    padding: 0.5rem !important;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .consultant-form-container {
+    padding: 2rem 1rem;
   }
 
-  h1, h2, h3 {
-    font-size: 1.2rem !important;
+  .consultant-form-container h1 {
+    font-size: 1.5rem;
   }
 
-  nav, header, footer {
-    flex-direction: column;
-    text-align: center;
+  .form-container {
+    padding: 0.75rem;
   }
 }

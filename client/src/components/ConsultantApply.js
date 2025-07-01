@@ -1,56 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ConsultantApply.css';
+import aceLogo from '../assets/main-logo-ace.png';
 
 const ConsultantApply = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    address: '',
-    city: '',
-    state: '',
-    zip: '',
-    licenseNumber: '',
-    licenseType: '',
-    serviceAreas: '',
-    certifications: '',
-    experience: '',
-    availability: '',
-    hasBackgroundCheck: '',
-    additionalInfo: ''
-  });
-
-  const handleChange = e => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    alert('Form submitted (this is a placeholder for backend submission).');
-  };
-
   return (
     <div className="consultant-form-container">
-      <h1>Consultant Application</h1>
-      <form onSubmit={handleSubmit}>
-        <input name="fullName" placeholder="Full Name" value={formData.fullName} onChange={handleChange} required />
-        <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-        <input name="phone" type="tel" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required />
-        <input name="address" placeholder="Address" value={formData.address} onChange={handleChange} />
-        <input name="city" placeholder="City" value={formData.city} onChange={handleChange} />
-        <input name="state" placeholder="State" value={formData.state} onChange={handleChange} />
-        <input name="zip" placeholder="ZIP Code" value={formData.zip} onChange={handleChange} />
-        <input name="licenseNumber" placeholder="Professional License Number" value={formData.licenseNumber} onChange={handleChange} />
-        <input name="licenseType" placeholder="License Type (RN, LVN, CNA, etc.)" value={formData.licenseType} onChange={handleChange} />
-        <input name="serviceAreas" placeholder="Service Areas (cities or zip codes)" value={formData.serviceAreas} onChange={handleChange} />
-        <input name="certifications" placeholder="Certifications (e.g., CPR, HIPAA, OSHA)" value={formData.certifications} onChange={handleChange} />
-        <textarea name="experience" placeholder="Describe your experience in Medicare/Medicaid consulting or care" value={formData.experience} onChange={handleChange}></textarea>
-        <input name="availability" placeholder="Availability (e.g., Weekdays, Weekends, Evenings)" value={formData.availability} onChange={handleChange} />
-        <input name="hasBackgroundCheck" placeholder="Do you have a valid background check? (Yes/No)" value={formData.hasBackgroundCheck} onChange={handleChange} />
-        <textarea name="additionalInfo" placeholder="Any additional information" value={formData.additionalInfo} onChange={handleChange}></textarea>
-        <button type="submit">Submit Application</button>
-      </form>
+      <img src={aceLogo} alt="ACE Compliance Consulting" className="ace-logo" />
+      <h1>Apply as a Consultant</h1>
+
+      <div className="form-container">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/JP3pTy8b7ityYCsVRtrN"
+          style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+          id="inline-JP3pTy8b7ityYCsVRtrN"
+          data-layout='{"id":"INLINE"}'
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Consultant Hiring Form – ACE"
+          data-height="1479"
+          data-layout-iframe-id="inline-JP3pTy8b7ityYCsVRtrN"
+          data-form-id="JP3pTy8b7ityYCsVRtrN"
+          title="Consultant Hiring Form – ACE"
+        ></iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
     </div>
   );
 };
