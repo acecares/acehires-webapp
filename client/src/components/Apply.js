@@ -43,7 +43,15 @@ const Apply = () => {
     <div className="next-steps">
     <h2 class="myh2class">Next Steps in Your Applying</h2>
           <ul>
-            <li>📅 <a href="https://calendly.com/your-interview-link" target="_blank" rel="noopener noreferrer">Schedule Your Interview</a></li>
+            <li>📅 <a 
+                href="https://calendly.com/acecares5" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: "#00d9ff", textDecoration: "underline" }}
+              >
+                Schedule Your Interview
+              </a>
+             </li>
             <li>🎓 <a href="https://yourtrainingportal.com" target="_blank" rel="noopener noreferrer">Access Compliance Courses</a></li>
             <li>🤝 Contact <a href="mailto:support@acecompliance.org" rel="noopener noreferrer">support@acecompliance.org</a> for help</li>
           </ul>
