@@ -21,7 +21,7 @@ const Apply = () => {
           <h3>Apply as a Consultant</h3>
           <p>For contractors or consultants looking to join our team</p>
         </div>
-        <div className="apply-card" onClick={() => navigate('/apply/ConsultantApply')}>
+        <div className="apply-card" onClick={() => navigate('/apply/CoachApply')}>
           <h3>Apply as a Coach</h3>
           <p>Help guide individuals toward success by sharing your expertise and experience.</p>
         </div>

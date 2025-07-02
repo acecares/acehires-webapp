@@ -17,6 +17,7 @@ import SuccessSupportStaffPage from "./pages/SuccessSupportStaffPage";
 import SuccessSpecialistPage from "./pages/SuccessSpecialistPage";
 import SuccessConsultantPage from "./pages/SuccessConsultantPage";
 import SuccessCoachesPage from "./pages/SuccessCoachesPage";
+import CoachApply from './components/CoachApply';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/success-specialist" element={<SuccessSpecialistPage />} />
         <Route path="/success-consultant" element={<SuccessConsultantPage />} />
         <Route path="/success-coaches" element={<SuccessCoachesPage />} />
+        <Route path="/apply/CoachApply" element={<CoachApply />} />
       </Routes>
     </Router>
   );
