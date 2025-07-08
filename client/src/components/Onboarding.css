@@ -3,7 +3,7 @@
     no-repeat center center/cover;
   min-height: 100vh;
   color: white;
-  font-family: "Poppins", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
   display: flex;
   justify-content: center;
   padding: 2rem;
@@ -102,7 +102,7 @@ button:hover {
 .title {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  font-family: "Poppins", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   color: #ffffff;
 }
 
@@ -142,7 +142,7 @@ button:hover {
 .label {
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   color: #ffffff;
 }
 
@@ -201,7 +201,6 @@ button:hover {
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
-
 
 .modal input {
   padding: 10px;
@@ -286,7 +285,6 @@ button:hover {
     min-width: auto;
   }
 }
-
 
 @media (max-width: 480px) {
   .modal {

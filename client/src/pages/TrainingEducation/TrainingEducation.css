@@ -1,0 +1,77 @@
+/* TrainingEducation.css */
+.training-section {
+  background-color: #014421;
+  color: white;
+  padding: 80px 20px;
+}
+
+.training-content {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .training-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.training-left {
+  flex: 1;
+}
+
+.training-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.training-left p {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.training-image img {
+  width: 400px;
+  max-width: 100%;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.training-card {
+  background: #fdf5ec;
+  color: black;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.training-card img {
+  width: 54px;
+}
+
+.training-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.training-card p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.2;
+}

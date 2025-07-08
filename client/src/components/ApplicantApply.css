@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .Applicant-form-container h1 {
@@ -52,7 +52,6 @@ button {
 button:hover {
   background-color: #0056b3;
 }
-
 
 .applicant-container {
   max-width: 900px;
@@ -109,31 +108,39 @@ iframe {
 
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
-  body, .container {
+  body,
+  .container {
     padding: 1rem;
     font-size: 1rem;
   }
-  img, video {
+  img,
+  video {
     max-width: 100%;
     height: auto;
   }
 }
 
 @media (max-width: 600px) {
-  .container, .card, .section, .content {
+  .container,
+  .card,
+  .section,
+  .content {
     flex-direction: column !important;
     width: 100% !important;
     font-size: 0.9rem !important;
     padding: 0.5rem !important;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-size: 1.2rem !important;
   }
 
-  nav, header, footer {
+  nav,
+  header,
+  footer {
     flex-direction: column;
     text-align: center;
   }
 }
-

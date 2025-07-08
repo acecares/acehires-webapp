@@ -1,0 +1,50 @@
+.navbar {
+  padding: 10px 40px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-logo img {
+  height: 60px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #2b7de9;
+}
+
+.navbar-contact .contact-button {
+  background-color: #003528;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-contact .contact-button:hover {
+  background-color: #005541;
+}

@@ -1,0 +1,97 @@
+/* Hero Section */
+.services-section {
+  background-color: #014421;
+  color: white;
+  padding: 80px 20px;
+}
+
+.services-content {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .services-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.services-left {
+  flex: 1;
+}
+
+.services-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0px;
+}
+
+.services-left p {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.services-image img {
+  width: 400px;
+  max-width: 100%;
+}
+
+/* Title and Grid */
+.services-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.service-card {
+  background: #fdf5ec;
+  color: black;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.service-card img {
+  width: 32px;
+}
+
+.service-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: scale(1.02);
+}
