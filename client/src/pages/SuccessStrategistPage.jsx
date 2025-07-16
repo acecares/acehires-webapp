@@ -29,9 +29,24 @@ const SuccessStrategistPage = () => {
       {agreed && (
         <div style={styles.card}>
           <h1 style={styles.heading}>Success Strategist</h1>
-          <p style={styles.subheading}>
-            Welcome to the Success Strategist role onboarding page.
-          </p>
+          <p style={styles.subheading}>Welcome to the Success Strategist role onboarding page.</p>
+
+          <div style={styles.contentBlock}>
+            <p>
+              The first step to creating successful home care, hospice, or personal assistance agency is determining the right strategy for implementation of systems, processes, policy manuals, and forms for each agency. Our clients work closely with our team to identify specific goals for management, operation, compliance, and overall agency success that achieve dramatic results.
+            </p>
+            <p><strong>Ace Compliance Consulting Creates Successful Clients</strong></p>
+            <p>
+              Extraordinary services with over 20 years of expertise in the homecare industry. Our Success Consulting Services enables our clients to implement the blueprint to achieve success in home care. Our team accomplishes all this by implementing the right strategy individualized for each agency to operate and achieve compliance with ease. Achieve Success with Ace!
+            </p>
+            <p>
+              What We Do well is provide services to empower and inspire home care agency owners to achieve success, operate with peace of mind to focus on patients care and create a life they love. ™
+            </p>
+            <p style={{ fontWeight: "900", textAlign: "center", marginTop: "10px" }}>
+              Success is not earned… It’s Created!<br />
+              Create your Success Story with Ace Compliance Consulting.
+            </p>
+          </div>
 
           <div style={styles.buttonGrid}>
             {documents.map((doc) => (
@@ -65,7 +80,6 @@ const SuccessStrategistPage = () => {
   );
 };
 
-// --- 💅 Clean & Condensed Styles ---
 const styles = {
   page: {
     minHeight: "100vh",
@@ -95,6 +109,12 @@ const styles = {
     textAlign: "center",
     marginBottom: "22px",
     color: "#555",
+  },
+  contentBlock: {
+    fontSize: "14px",
+    lineHeight: "1.7",
+    color: "#444",
+    marginBottom: "20px",
   },
   buttonGrid: {
     display: "grid",
