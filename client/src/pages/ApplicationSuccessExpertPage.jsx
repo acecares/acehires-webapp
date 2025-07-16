@@ -16,7 +16,7 @@ const ApplicationSuccessExpertPage = () => {
   const documents = [
     { id: "onboarding", label: "Onboarding Form", file: "/Application_Employee_Part_1.pdf" },
     { id: "handbook", label: "Employee Handbook", file: "/Application_Employee_Part_2.pdf" },
-    { id: "compliance", label: "Compliance Guide", file: "/Employee-Onboarding-updated.pdf" },
+    { id: "compliance", label: "Team Member Success Guidelines", file: "/Employee-Onboarding-updated.pdf" },
     { id: "training", label: "Training Overview", file: "/Application_Employee_Part_4.pdf" },
     { id: "policy", label: "Policy Agreement", file: "/Application_Employee_Part_5.pdf" },
   ];
