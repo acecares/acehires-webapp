@@ -20,6 +20,7 @@ import SuccessSpecialistPage from "./pages/SuccessSpecialistPage";
 import SuccessConsultantPage from "./pages/SuccessConsultantPage";
 import SuccessCoachesPage from "./pages/SuccessCoachesPage";
 import CoachApply from "./components/CoachApply";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/vision" element={<Vision />} />
         <Route path="/success-strategist" element={<SuccessStrategistPage />} />
+        <Route path="/Contact" element={<Contact />} />
         <Route
           path="/application-success-expert"
           element={<ApplicationSuccessExpertPage />}
