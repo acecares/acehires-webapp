@@ -12,6 +12,30 @@ const Apply = () => {
     <div className="apply-container">
       <h1>Apply Now</h1>
 
+      <div className="next-steps">
+    <h2 class="myh2class">Steps in Your Applying</h2>
+          <ul>
+            {/* <li>📅 <a 
+                href="https://calendly.com/acecares5" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: "#00d9ff", textDecoration: "underline" }}
+              >
+                Schedule Your Interview
+              </a>
+             </li> */}
+            {/* <li>🎓 <a href="https://yourtrainingportal.com" target="_blank" rel="noopener noreferrer">Access Compliance Courses</a></li>
+            <li>🤝 Contact <a href="mailto:support@acecompliance.org" rel="noopener noreferrer">support@acecompliance.org</a> for help</li> */}
+          </ul>
+     </div>
+      <h3>Steps 1 : Download the Application and Assessment Forms below</h3>
+     
+       <div className="pdf-section">
+        <a href={pdf1} download className="pdf-button">📄 Download Application Form</a>
+        <a href={pdf2} download className="pdf-button">📄 Download Assessment Form</a>
+      </div>
+      <br></br>
+       <h3>Steps 2 : Fill the form by clicking on this buttons below based on your profile and attach these files while submitting</h3>
       <div className="card-section">
         <div className="apply-card" onClick={() => navigate('/apply/applicant')}>
           <h3>Apply as an Applicant</h3>
@@ -29,18 +53,20 @@ const Apply = () => {
         
       </div>
 
-      <div className="note-box">
+ <div className="note-box">
+        <p>
+          📌 <strong>Note:</strong> Once the forms are filled and submitted, an email confirmation will be sent to you!
+        </p>
+      </div> */}
+      {/* <div className="note-box">
         <p>
           📌 <strong>Note:</strong> Complete the form and assessment below and attach them with your submission.
         </p>
       </div>
 
-      <div className="pdf-section">
-        <a href={pdf1} download className="pdf-button">📄 Download Application Form</a>
-        <a href={pdf2} download className="pdf-button">📄 Download Assessment Form</a>
-      </div>
+     
 
-    <div className="next-steps">
+    {/* <div className="next-steps">
     <h2 class="myh2class">Next Steps in Your Applying</h2>
           <ul>
             <li>📅 <a 
@@ -55,7 +81,7 @@ const Apply = () => {
             <li>🎓 <a href="https://yourtrainingportal.com" target="_blank" rel="noopener noreferrer">Access Compliance Courses</a></li>
             <li>🤝 Contact <a href="mailto:support@acecompliance.org" rel="noopener noreferrer">support@acecompliance.org</a> for help</li>
           </ul>
-     </div>
+     </div> */}
     </div>
     </div>
   );
