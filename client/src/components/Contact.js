@@ -33,14 +33,14 @@ const Contact = () => {
 
           <div className="contact-socials">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/acecomplianceconsutling"
               target="_blank"
               rel="noopener noreferrer"
             >
               📘
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/acecompliance/"
               target="_blank"
               rel="noopener noreferrer"
             >
