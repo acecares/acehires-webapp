@@ -20,7 +20,8 @@ import SuccessSpecialistPage from "./pages/SuccessSpecialistPage";
 import SuccessConsultantPage from "./pages/SuccessConsultantPage";
 import SuccessCoachesPage from "./pages/SuccessCoachesPage";
 import CoachApply from "./components/CoachApply";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (

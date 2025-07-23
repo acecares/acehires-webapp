@@ -2,7 +2,7 @@
 .contact-section {
   background-color: #014421;
   min-height: 100vh;
-  padding: 60px 20px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,8 +12,7 @@
 .contact-container {
   background: white;
   display: flex;
-  flex-direction: column;
-  border-radius: 20px;
+  flex-direction: column-reverse;
   max-width: 1200px;
   width: 100%;
   overflow: hidden;
@@ -38,14 +37,14 @@
 }
 
 .contact-illustration {
-  width: 240px;
   max-width: 100%;
-  align-self: center;
+  height: auto;
 }
 
 .contact-left h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 10px;
+  margin: 0;
 }
 
 .contact-left p {
@@ -59,7 +58,7 @@
   align-items: center;
   gap: 10px;
   font-size: 0.95rem;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .contact-socials {
@@ -80,6 +79,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
+  max-width: 500px !important;
+  padding: 0 !important;
 }
 
 .contact-form label {
@@ -114,6 +116,7 @@
   justify-content: center;
   gap: 10px;
   transition: background-color 0.2s ease;
+  width: 105%;
 }
 
 .contact-form button:hover {
