@@ -14,7 +14,7 @@ const SuccessCoachesPage = () => {
 
   const documents = [
     { id: "handbook", label: "Success Specialist role & Responsibilities", file: "/1-Success_Manager_Position_Description.pdf" },
-    { id: "onboarding", label: "Onboarding Form", file: "/Application_Employee_Part_1.pdf" },
+    { id: "onboarding", label: "Onboarding Form", file: "/Warm_Welcome.pdf" },
     { id: "compliance", label: "Team Member Success Guidelines", file: "/Employee-Onboarding-updated.pdf" },
     { id: "training", label: "Training Overview", file: "/Application_Employee_Part_4.pdf" },
     { id: "policy", label: "Policy Agreement", file: "/policy-agreement.pdf" },

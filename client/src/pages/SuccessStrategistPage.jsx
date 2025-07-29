@@ -13,8 +13,8 @@ const SuccessStrategistPage = () => {
   const handleAgree = () => setAgreed(true);
 
   const documents = [
-    { id: "handbook", label: "Success Strategist Roles & Responsibilities", file: "/Application_Employee_Part_2.pdf" },
-    { id: "onboarding", label: "Onboarding Form", file: "/Application_Employee_Part_1.pdf" },
+    { id: "handbook", label: "Success Strategist Roles & Responsibilities", file: "/Success_Solution_Strategist_Position.pdf" },
+    { id: "onboarding", label: "Onboarding Form", file: "/Warm_Welcome.pdf" },
     { id: "compliance", label: "Team Member Success Guidelines", file: "/Employee-Onboarding-updated.pdf" },
     { id: "training", label: "Training Overview", file: "/Application_Employee_Part_4.pdf" },
     { id: "policy", label: "Policy Agreement", file: "/policy-agreement.pdf" },
