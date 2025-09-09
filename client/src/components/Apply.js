@@ -57,7 +57,7 @@ const Apply = () => {
         <p>
           📌 <strong>Note:</strong> Once the forms are filled and submitted, an email confirmation will be sent to you!
         </p>
-      </div> */}
+      </div> 
       {/* <div className="note-box">
         <p>
           📌 <strong>Note:</strong> Complete the form and assessment below and attach them with your submission.
