@@ -19,7 +19,7 @@ const Contact = () => {
             <h2>Let’s Connect</h2>
             <p>
               Whether you're seeking expert guidance, exploring collaboration,
-              or simply have a question, our team is ready to assist you.
+              or simply have a question, our team is ready to assist you
             </p>
 
             <div className="contact-info">
@@ -65,27 +65,43 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Section – Embed GoHighLevel Form */}
+          {/* Right Section */}
           <div className="contact-right">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/xzCwRSRQlzjq3H2OQs1U"
-              style={{ width: "100%", height: "600px", border: "none", borderRadius: "8px" }}
-              id="inline-xzCwRSRQlzjq3H2OQs1U"
-              data-layout='{"id":"INLINE"}'
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="AceHires - ContactUs"
-              data-height="432"
-              data-layout-iframe-id="inline-xzCwRSRQlzjq3H2OQs1U"
-              data-form-id="xzCwRSRQlzjq3H2OQs1U"
-              title="AceHires - ContactUs"
-              allowFullScreen
-            ></iframe>
-            <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            <form className="contact-form">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your full name"
+                required
+              />
+
+              <label htmlFor="position">Position Applied:</label>
+              <input
+                type="text"
+                id="position"
+                placeholder="e.g., Consultant, Coach"
+                required
+              />
+
+              <label htmlFor="message">Inquiry / Comment:</label>
+              <textarea
+                id="message"
+                placeholder="Your message here..."
+                rows="5"
+                required
+              ></textarea>
+
+              <button type="submit">
+                <span className="send-icon">
+                  {" "}
+                  <span>
+                    <img src="/icons/rocket-icon.svg" alt="phone" />
+                  </span>
+                </span>{" "}
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </section>

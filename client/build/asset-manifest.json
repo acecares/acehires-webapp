@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e5d9a5a7.css",
+    "main.js": "/static/js/main.23299579.js",
+    "static/js/453.419a5d54.chunk.js": "/static/js/453.419a5d54.chunk.js",
+    "static/media/diverse-people-working-office.jpg": "/static/media/diverse-people-working-office.d90875aa83d20000323b.jpg",
+    "static/media/PERSONALITY_TEST_RVD_2023.pdf": "/static/media/PERSONALITY_TEST_RVD_2023.4f820e431da42bbbff67.pdf",
+    "static/media/Application_Employee_Part_1.pdf": "/static/media/Application_Employee_Part_1.a0884f20b7133f2a0731.pdf",
+    "static/media/main-logo-ace.png": "/static/media/main-logo-ace.51b0342ac8194eba8883.png",
+    "index.html": "/index.html",
+    "main.e5d9a5a7.css.map": "/static/css/main.e5d9a5a7.css.map",
+    "main.23299579.js.map": "/static/js/main.23299579.js.map",
+    "453.419a5d54.chunk.js.map": "/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5d9a5a7.css",
+    "static/js/main.23299579.js"
+  ]
+}
