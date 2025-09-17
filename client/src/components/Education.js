@@ -10,25 +10,33 @@ const Education = () => {
       <div className="overlay">
         <h1>Training & Education</h1>
         <p>
-          At ACE Compliance Consulting, we provide self-paced and guided training resources to help consultants stay
-          compliant and certified in HIPAA, Medicaid/Medicare policies, and state-level PAS applications.
+          At ACE Compliance Consulting, we offer comprehensive training modules to support consultants in excelling at
+          every stage of their career — from fundamental compliance to advanced engagement strategies.
         </p>
         <div className="cards">
           <div className="card">
-            <h3>🧠 HIPAA Compliance Training</h3>
-            <p>Both free and premium HIPAA courses tailored to consultants and caregivers.</p>
+            <h3>📘 Ace Compliance Consulting Fundamentals</h3>
+            <p>Core training to understand the mission, processes, and compliance foundation of ACE.</p>
           </div>
           <div className="card">
-            <h3>📄 Medicare/Medicaid Certification</h3>
-            <p>Online resources and checklists to prepare for your certification exam.</p>
+            <h3>📗 Compliance & Consulting Excellence</h3>
+            <p>Advance your understanding of compliance expectations and best consulting practices.</p>
           </div>
           <div className="card">
-            <h3>📚 PDFs, PPTs & Videos</h3>
-            <p>Downloadable content to learn on your own schedule at your own pace.</p>
+            <h3>🎯 Client Engagement & Professional Etiquette</h3>
+            <p>Master communication, ethics, and rapport-building strategies with clients.</p>
           </div>
           <div className="card">
-            <h3>🌐 GoHighLevel Modules</h3>
-            <p>Access internal courses and compliance workflows via our partner portal.</p>
+            <h3>📝 Documentation & Reporting Standards</h3>
+            <p>Learn proper case documentation, compliance logs, and digital reporting techniques.</p>
+          </div>
+          <div className="card">
+            <h3>💼 Consulting Training</h3>
+            <p>Hands-on consulting techniques tailored for mental health and behavioral healthcare.</p>
+          </div>
+          <div className="card">
+            <h3>🎓 Education Consultant Training</h3>
+            <p>Specialized curriculum for education-focused consultants serving academic institutions.</p>
           </div>
         </div>
 
