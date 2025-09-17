@@ -45,5 +45,6 @@ const Education = () => {
     </div>
   );
 };
+console.log("✅ Education page loaded - deployment test");
 
 export default Education;
