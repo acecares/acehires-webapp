@@ -46,4 +46,6 @@ const Education = () => {
   );
 };
 
+console.log("✅ lets gooo");
+
 export default Education;
