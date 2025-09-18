@@ -1,128 +1,55 @@
-/* Section container */
-.contact-section {
-  background-color: #014421;
+/* Contact.css */
+.contact-wrapper {
+  background: url("https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1600&q=80")
+    no-repeat center center/cover;
   min-height: 100vh;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 2rem;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
-/* Inner grid container */
-.contact-container {
-  background: white;
-  display: flex;
-  flex-direction: column-reverse;
-  max-width: 1200px;
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ace-logo {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+
+.form-wrapper {
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .contact-container {
-    flex-direction: row;
-  }
-}
-
-/* Left Side */
-.contact-left {
-  background-color: #014421;
-  color: white;
-  flex: 1;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  justify-content: center;
-}
-
-.contact-illustration {
-  max-width: 100%;
-  height: auto;
-}
-
-.contact-left h2 {
-  font-size: 2.5rem;
-  margin-top: 10px;
-  margin: 0;
-}
-
-.contact-left p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Contact info */
-.contact-info div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-  margin-bottom: 16px;
-}
-
-.contact-socials {
-  display: flex;
-  gap: 16px;
-  margin-top: 20px;
-  font-size: 1.5rem;
-}
-
-/* Right Side (Form) */
-.contact-right {
-  flex: 1;
-  background-color: white;
-  padding: 40px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+iframe {
   width: 100%;
-  max-width: 500px !important;
-  padding: 0 !important;
-}
-
-.contact-form label {
-  font-weight: bold;
-  color: #f59e0b; /* yellow-orange */
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  width: 100%;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form button {
-  background-color: #0f6c44;
-  color: white;
   border: none;
-  padding: 14px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition: background-color 0.2s ease;
-  width: 105%;
+  min-height: 2000px;
 }
 
-.contact-form button:hover {
-  background-color: #0d5937;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 1.5rem;
+  }
 
-.send-icon {
-  font-size: 1.2rem;
+  .ace-logo {
+    width: 150px;
+  }
+
+  .form-wrapper {
+    margin: 0 1rem;
+  }
 }

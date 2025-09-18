@@ -1,112 +1,57 @@
-// src/components/ContactUs.jsx
-import React from "react";
+// src/pages/Contact.js or src/components/ContactUs.jsx
+import React, { useEffect } from "react";
+// import Navbar from "../../components/Navbar/Navbar";
 import "./Contact.css";
-import Navbar from "../../components/Navbar/Navbar";
 
 const Contact = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
-    <main>
-      <Navbar />
-      <section className="contact-section">
-        <div className="contact-container">
-          {/* Left Section */}
-          <div className="contact-left">
-            <img
-              src="/images/contact-illustration.png"
-              alt="Contact Illustration"
-              className="contact-illustration"
-            />
-            <h2>Let’s Connect</h2>
-            <p>
-              Whether you're seeking expert guidance, exploring collaboration,
-              or simply have a question, our team is ready to assist you
-            </p>
-
-            <div className="contact-info">
-              <div>
-                <span>
-                  <img src="/icons/mail-icon.svg" alt="mail" />
-                </span>
-                support@acehires.com
-              </div>
-              <div>
-                <span>
-                  <img src="/icons/phone-icon.svg" alt="phone" />
-                </span>
-                1 (713) 995-8146
-              </div>
-              <div>
-                <span>
-                  <img src="/icons/time-icon.svg" alt="time" />
-                </span>
-                9:00 AM – 5:00 PM
-              </div>
-            </div>
-
-            <div className="contact-socials">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>
-                  <img src="/icons/facebook-icon.svg" alt="facebook" />
-                </span>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>
-                  <img src="/icons/instagram-icon.svg" alt="instagram" />
-                </span>
-              </a>
-            </div>
-          </div>
-
-          {/* Right Section */}
-          <div className="contact-right">
-            <form className="contact-form">
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Your full name"
-                required
-              />
-
-              <label htmlFor="position">Position Applied:</label>
-              <input
-                type="text"
-                id="position"
-                placeholder="e.g., Consultant, Coach"
-                required
-              />
-
-              <label htmlFor="message">Inquiry / Comment:</label>
-              <textarea
-                id="message"
-                placeholder="Your message here..."
-                rows="5"
-                required
-              ></textarea>
-
-              <button type="submit">
-                <span className="send-icon">
-                  {" "}
-                  <span>
-                    <img src="/icons/rocket-icon.svg" alt="phone" />
-                  </span>
-                </span>{" "}
-                Send Message
-              </button>
-            </form>
-          </div>
+    <>
+      {/* <Navbar /> */}
+      <div className="contact-wrapper">
+        <div className="contact-header">
+          <img src="/main-logo.png" alt="ACE Logo" className="ace-logo" />
+          <h1 className="contact-title">Contact Us</h1>
         </div>
-      </section>
-    </main>
+
+        <div className="form-wrapper">
+          <iframe
+  id="inline-xzCwRSRQlzjq3H2OQs1U"
+  src="https://api.leadconnectorhq.com/widget/form/xzCwRSRQlzjq3H2OQs1U"
+  style={{
+    width: '100%',
+    height: '800px', // Adjusted height
+    border: 'none',
+    borderRadius: '4px',
+  }}
+  data-layout='{"id":"INLINE"}'
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="AceHires - ContactUs"
+  data-layout-iframe-id="inline-xzCwRSRQlzjq3H2OQs1U"
+  data-form-id="xzCwRSRQlzjq3H2OQs1U"
+  title="AceHires - ContactUs"
+/>
+        </div>
+      </div>
+    </>
   );
 };
+
+
 
 export default Contact;
