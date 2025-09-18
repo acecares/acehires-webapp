@@ -1,43 +1,42 @@
 // src/components/TrainingEducation.jsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./TrainingEducation.css";
 import Navbar from "../../components/Navbar/Navbar";
 
 const trainingItems = [
   {
-    title: "HIPAA Compliance Training",
+    title: "📘 Ace Compliance Consulting Fundamentals",
     description:
-      "Both free and premium HIPAA courses tailored to consultants and caregivers.",
-    icon: "/icons/training-icon.svg",
-    link: "/training/hipaa",
+      "Core training to understand the mission, processes, and compliance foundation of ACE.",
   },
   {
-    title: "Medicare/Medicaid Certification",
+    title: "📗 Compliance & Consulting Excellence",
     description:
-      "Online resources and checklists to prepare for your certification exam.",
-    icon: "/icons/certification-icon.svg",
-    link: "/training/medicare",
+      "Advance your understanding of compliance expectations and best consulting practices.",
   },
   {
-    title: "PDFs, PPTs & Videos",
+    title: "🎯 Client Engagement & Professional Etiquette",
     description:
-      "Downloadable content to learn on your own schedule at your own pace.",
-    icon: "/icons/training-icon.svg",
-    link: "/training/resources",
+      "Master communication, ethics, and rapport-building strategies with clients.",
   },
   {
-    title: "GoHighLevel Modules",
+    title: "📝 Documentation & Reporting Standards",
     description:
-      "Access internal courses and compliance workflows via our partner portal.",
-    icon: "/icons/certification-icon.svg",
-    link: "/training/gohighlevel",
+      "Learn proper case documentation, compliance logs, and digital reporting techniques.",
+  },
+  {
+    title: "💼 Consulting Training",
+    description:
+      "Hands-on consulting techniques tailored for mental health and behavioral healthcare.",
+  },
+  {
+    title: "🎓 Education Consultant Training",
+    description:
+      "Specialized curriculum for education-focused consultants serving academic institutions.",
   },
 ];
 
 const TrainingEducation = () => {
-  const navigate = useNavigate();
-
   return (
     <main>
       <Navbar />
@@ -62,15 +61,7 @@ const TrainingEducation = () => {
 
         <div className="training-grid">
           {trainingItems.map((item, idx) => (
-            <div
-              className="training-card clickable"
-              key={idx}
-              onClick={() => navigate(item.link)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === "Enter" && navigate(item.link)}
-            >
-              <img src={item.icon} alt="icon" />
+            <div className="training-card" key={idx}>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </div>
