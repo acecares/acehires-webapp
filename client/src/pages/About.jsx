@@ -1,13 +1,13 @@
 import React from "react";
-import { AboutHero, VisionMission, WhyChooseUs } from "../components/AboutUs";
+import { AboutHero } from "../components/AboutUs";
 import Navbar from "../components/Navbar/Navbar";
 
 const About = () => (
   <main>
     <Navbar />
     <AboutHero />
-    <VisionMission />
-    <WhyChooseUs />
+    {/* <VisionMission />
+    <WhyChooseUs /> */}
   </main>
 );
 
