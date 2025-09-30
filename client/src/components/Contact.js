@@ -69,9 +69,9 @@ const Contact = () => {
           <div className="contact-right">
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/xzCwRSRQlzjq3H2OQs1U"
-              style={{ width: "100%", height: "600px", border: "none", borderRadius: "8px" }}
-              id="inline-xzCwRSRQlzjq3H2OQs1U"
-              data-layout='{"id":"INLINE"}'
+              style="width:100%;height:100%;border:none;border-radius:4px"
+              id="inline-xzCwRSRQlzjq3H2OQs1U" 
+              data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"
               data-trigger-value=""
               data-activation-type="alwaysActivated"
@@ -79,13 +79,13 @@ const Contact = () => {
               data-deactivation-type="neverDeactivate"
               data-deactivation-value=""
               data-form-name="AceHires - ContactUs"
-              data-height="432"
+              data-height="438"
               data-layout-iframe-id="inline-xzCwRSRQlzjq3H2OQs1U"
               data-form-id="xzCwRSRQlzjq3H2OQs1U"
               title="AceHires - ContactUs"
-              allowFullScreen
-            ></iframe>
-            <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                  >
+          </iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
           </div>
         </div>
       </section>
