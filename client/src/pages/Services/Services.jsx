@@ -1,84 +1,65 @@
 // src/components/Services.jsx
 import React from "react";
 import "./Services.css";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 
 const serviceItems = [
   {
-    title: "PAS Licensing Support",
+    title: "QAPI",
     description:
-      "Expert guidance to complete and submit PAS applications for multiple U.S. states. We walk clients through each step of the process.",
-    icon: "/icons/training-icon.svg",
-    link: "/services/pas-licensing",
+      "Quality Assurance & Performance Improvement support for compliance and growth.",
   },
   {
-    title: "HIPAA Compliance Guidance",
+    title: "Mock Survey",
     description:
-      "Ensure your practice or business is compliant with HIPAA laws with our detailed audits, policy templates, and consultant coaching.",
-    icon: "/icons/certification-icon.svg",
-    link: "/services/hipaa-guidance",
+      "Simulated surveys to prepare agencies for official state and federal inspections.",
   },
   {
-    title: "Medicaid/Medicare Consulting",
+    title: "Chart Audit",
     description:
-      "We prepare documentation and assist in applying for Medicaid/Medicare provider enrollment or billing credentials.",
-    icon: "/icons/training-icon.svg",
-    link: "/services/medicare",
+      "Detailed chart reviews to identify compliance gaps and ensure readiness.",
   },
   {
-    title: "Training for In-Home Caregivers",
+    title: "Legal Consulting",
     description:
-      "Ensure your practice or business is compliant with HIPAA laws with our detailed audits, policy templates, and consultant coaching.",
-    icon: "/icons/certification-icon.svg",
-    link: "/services/caregiver-training",
+      "Guidance on healthcare compliance laws, policies, and documentation.",
   },
   {
-    title: "Admin Support & Workflow Automation",
+    title: "Plan of Correction",
     description:
-      "We implement tools like GoHighLevel, vcita, and forms to help automate reminders, document intake, and follow-ups.",
-    icon: "/icons/training-icon.svg",
-    link: "/services/admin-support",
+      "Strategic corrective plans to resolve deficiencies post-survey.",
+  },
+  {
+    title: "Compliance Services",
+    description:
+      "Comprehensive compliance support for agencies and providers.",
+  },
+  {
+    title: "Success Strategic Session",
+    description:
+      "One-on-one sessions focused on planning and operational excellence.",
+  },
+  {
+    title: "Agency Evaluation",
+    description:
+      "Complete evaluation of policies, workflows, and compliance readiness.",
+  },
+  {
+    title: "Find & Fix Solutions (Corrections)",
+    description:
+      "Hands-on correction services to address compliance findings quickly.",
   },
 ];
 
 const Services = () => {
-  const navigate = useNavigate();
-
   return (
     <main>
       <Navbar />
       <section className="services-section">
-        <div className="services-content">
-          <div className="services-left">
-            <h2>Services We Offer</h2>
-            <p>
-              At ACE Compliance Consulting, we provide self-paced and guided
-              training resources to help consultants stay compliant and
-              certified in HIPAA, Medicaid/Medicare policies, and state-level
-              PAS applications.
-            </p>
-          </div>
-          <div className="services-image">
-            <img
-              src="/images/services-illustration.png"
-              alt="Services Illustration"
-            />
-          </div>
-        </div>
-
-        <h3 className="services-title">Services</h3>
+        <h2 className="services-heading">Consulting Services</h2>
         <div className="services-grid">
           {serviceItems.map((item, idx) => (
-            <div
-              className="service-card clickable"
-              key={idx}
-              onClick={() => navigate(item.link)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === "Enter" && navigate(item.link)}
-            >
-              <img src={item.icon} alt="icon" />
+            <div key={idx} className="service-card">
               <h4>{item.title}</h4>
               <p>{item.description}</p>
             </div>

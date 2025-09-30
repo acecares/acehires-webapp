@@ -44,7 +44,7 @@ const Home = () => {
         </div>
         <div
           className="card"
-          onClick={() => (window.location.href = "https://www.acecompliance.org/healthcare-consulting-services/services-request")}
+          onClick={() => (window.location.href = "/services")}
         >
           <h2>Services</h2>
         </div>
