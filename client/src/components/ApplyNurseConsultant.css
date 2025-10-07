@@ -1,61 +1,44 @@
-/* .consultant-container {
-  background-image: url("/nurse-bg.jpg");
-  background-size: cover;
+.nurse-consultant-page {
+  background-image: url("../../public/nurse-bg-1.jpg");
+ background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  color: #fff;
-  position: relative;
-} */
-
-.consultant-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 0;
+  overflow-x: hidden; /* ✅ Prevent horizontal scroll */
+  display: flex;
+  flex-direction: column;
 }
 
-.consultant-header {
-  position: relative;
-  z-index: 1;
+.nurse-consultant-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 100px 20px 60px 20px; */
+}
+
+.nurse-consultant-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 50px;
+  max-width: 850px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 100px 20px 40px 20px;
 }
 
-.apply-title {
+.nurse-consultant-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #004d33;
-  background-color: rgba(255, 255, 255, 0.9);
-  display: inline-block;
-  padding: 10px 25px;
-  border-radius: 8px;
+  color: #c01313;
+  margin-bottom: 10px;
 }
 
-.consultant-header p {
-  color: #007b5e;
-  background-color: rgba(255, 255, 255, 0.9);
-  display: inline-block;
-  margin-top: 15px;
-  padding: 8px 20px;
-  border-radius: 8px;
-}
-
-.form-wrapper {
-  position: relative;
-  z-index: 1;
-  padding: 0 10% 80px 10%;
-}
-
-.form-embed-container {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+.nurse-consultant-subtitle {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 35px;
 }
 
 iframe {
@@ -63,14 +46,15 @@ iframe {
   border: none;
   min-height: 1100px;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
-  .apply-title {
-    font-size: 1.6rem;
+  .nurse-consultant-container {
+    padding: 30px 20px;
   }
 
-  .form-embed-container {
-    padding: 20px;
+  .nurse-consultant-title {
+    font-size: 1.6rem;
   }
 }

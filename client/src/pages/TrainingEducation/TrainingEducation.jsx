@@ -5,32 +5,32 @@ import Navbar from "../../components/Navbar/Navbar";
 
 const trainingItems = [
   {
-    title: "📘 Ace Compliance Consulting Fundamentals",
+    title: "Ace Compliance Consulting Fundamentals",
     description:
       "Core training to understand the mission, processes, and compliance foundation of ACE.",
   },
   {
-    title: "📗 Compliance & Consulting Excellence",
+    title: "Compliance & Consulting Excellence",
     description:
       "Advance your understanding of compliance expectations and best consulting practices.",
   },
   {
-    title: "🎯 Client Engagement & Professional Etiquette",
+    title: "Client Engagement & Professional Etiquette",
     description:
       "Master communication, ethics, and rapport-building strategies with clients.",
   },
   {
-    title: "📝 Documentation & Reporting Standards",
+    title: "Documentation & Reporting Standards",
     description:
       "Learn proper case documentation, compliance logs, and digital reporting techniques.",
   },
   {
-    title: "💼 Consulting Training",
+    title: "Consulting Training",
     description:
       "Hands-on consulting techniques tailored for mental health and behavioral healthcare.",
   },
   {
-    title: "🎓 Education Consultant Training",
+    title: "Education Consultant Training",
     description:
       "Specialized curriculum for education-focused consultants serving academic institutions.",
   },

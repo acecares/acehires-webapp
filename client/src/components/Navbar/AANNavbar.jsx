@@ -11,12 +11,12 @@ const AANNavbar = () => {
         </div>
 
         <ul className="aan-navbar-links">
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/apply-nursing">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/apply-nursing">Apply</Link></li>
           <li><Link to="/vision">Mission & Vision</Link></li>
-          <li><Link to="/coverage-areas">Coverage Areas</Link></li>
+          <li><Link to="/education">Training & Education</Link></li>
         </ul>
 
         <div className="aan-navbar-contact">
