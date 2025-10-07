@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* === Page Background === */
+.apply-nursing-page {
+  background-image: url("../../public/nurse-bg-1.jpg"); /* Keep your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* padding-top: 120px; create space below navbar */
+  position: relative;
+}
+
+/* translucent overlay on top of image for readability */
+.apply-nursing-overlay {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* padding: 40px 0; */
+  /* background: rgba(255, 255, 255, 0.9); light transparent white overlay */
+}
+
+/* === Content Box (centered) === */
+.apply-nursing-container {
+  /* background: #fff; */
+  border-radius: 16px;
+  padding: 50px;
+  max-width: 850px;
+  width: 90%;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+  text-align: center;
+}
+
+/* === Titles === */
+.apply-nursing-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #c01313;
+  margin-bottom: 10px;
+}
+
+.apply-nursing-intro {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 35px;
+}
+
+.apply-nursing-section-title {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.apply-nursing-subtitle {
+  color: #444;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 25px 0 15px 0;
+}
+
+/* === Buttons === */
+.apply-nursing-pdf-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.apply-nursing-pdf-btn {
+  background: #c01313;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.apply-nursing-pdf-btn:hover {
+  background: #fe0000;
+  transform: translateY(-3px);
+}
+
+/* === Cards === */
+.apply-nursing-card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.apply-nursing-card {
+  background: #fff;
+  border: 2px solid #c01313;
+  border-radius: 12px;
+  padding: 30px;
+  width: 320px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.apply-nursing-card h3 {
+  color: #c01313;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.apply-nursing-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.apply-nursing-card:hover {
+  background: #c01313;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(192, 19, 19, 0.4);
+}
+
+.apply-nursing-card:hover h3,
+.apply-nursing-card:hover p {
+  color: #fff;
+}
+
+/* === Note === */
+.apply-nursing-note {
+  margin-top: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 5px solid #fe0000;
+  padding: 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .apply-nursing-page {
+    padding-top: 100px;
+  }
+
+  .apply-nursing-container {
+    padding: 30px 20px;
+  }
+
+  .apply-nursing-title {
+    font-size: 1.8rem;
+  }
+
+  .apply-nursing-card {
+    width: 100%;
+  }
+}

@@ -22,6 +22,11 @@ import SuccessCoachesPage from "./pages/SuccessCoachesPage";
 import CoachApply from "./components/CoachApply";
 // import Contact from "./components/Contact";
 import Contact from "./pages/Contact/Contact";
+import ApplyNursing from "./components/ApplyNursing";
+import ApplyNurseApplicant from "./components/ApplyNurseApplicant";
+import ApplyNurseConsultant from "./components/ApplyNurseConsultant";
+
+
 
 function App() {
   return (
@@ -51,6 +56,10 @@ function App() {
         <Route path="/success-consultant" element={<SuccessConsultantPage />} />
         <Route path="/success-coaches" element={<SuccessCoachesPage />} />
         <Route path="/apply/CoachApply" element={<CoachApply />} />
+        <Route path="/apply-nursing" element={<ApplyNursing />} />
+        <Route path="/apply/nurseapplicant" element={<ApplyNurseApplicant />} />
+        <Route path="/apply/nurseconsultant" element={<ApplyNurseConsultant />} />
+
       </Routes>
     </Router>
   );

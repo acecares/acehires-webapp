@@ -1,0 +1,121 @@
+.nurse-applicant-page {
+  background-image: url("/nurse-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+.nurse-applicant-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.nurse-applicant-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 80px 10%;
+}
+
+.nurse-applicant-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  color: #003e29;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nurse-applicant-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004d33;
+  margin-bottom: 20px;
+}
+
+.nurse-applicant-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #007b5e;
+  margin-bottom: 35px;
+}
+
+.nurse-applicant-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nurse-applicant-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007b5e;
+  box-shadow: 0 0 5px rgba(0, 123, 94, 0.3);
+}
+
+.nurse-applicant-submit-btn {
+  margin-top: 25px;
+  background-color: #007b5e;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.3s ease;
+}
+
+.nurse-applicant-submit-btn:hover {
+  background-color: #005f47;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nurse-applicant-container {
+    padding: 25px;
+  }
+
+  .nurse-applicant-title {
+    font-size: 1.6rem;
+  }
+}
+iframe {
+  width: 100%;
+  border: none;
+  min-height: 2100px;
+}
