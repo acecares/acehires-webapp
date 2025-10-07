@@ -1,7 +1,7 @@
-// src/components/Services.jsx
 import React from "react";
 import "./Services.css";
-import Navbar from "../../components/Navbar/Navbar";
+// import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar"; // ✅ Added Navbar import
 
 const serviceItems = [
   {
@@ -51,22 +51,30 @@ const serviceItems = [
   },
 ];
 
+
 const Services = () => {
   return (
-    <main>
+    <div className="services-page">
+      {/* ✅ Navbar */}
       <Navbar />
-      <section className="services-section">
-        <h2 className="services-heading">Consulting Services</h2>
+
+      {/* Content Section */}
+      <div className="services-content">
+        <h1 className="services-title">Our Consulting Services</h1>
+        <p className="services-subtitle">
+          Empowering agencies to achieve compliance excellence through strategic and customized consulting support.
+        </p>
+
         <div className="services-grid">
-          {serviceItems.map((item, idx) => (
-            <div key={idx} className="service-card">
-              <h4>{item.title}</h4>
-              <p>{item.description}</p>
+          {serviceItems.map((service, index) => (
+            <div key={index} className="service-card">
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
             </div>
           ))}
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 };
 

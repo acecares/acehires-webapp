@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutUs.css";
+import "./WhyChooseUs.css";
 
 const points = [
   {
@@ -37,11 +37,20 @@ const points = [
 const WhyChooseUs = () => (
   <section className="why-choose">
     <div className="why-choose-container">
-      <h2>Why Choose Us</h2>
+      <h2 className="why-title">Why Choose Us</h2>
+      <p className="why-intro">
+        Our team at Ace Compliance Consulting is dedicated to delivering excellence, integrity, and growth.
+        Here's what sets us apart:
+      </p>
+
       <div className="features-grid">
         {points.map((point, index) => (
           <div className="feature-box" key={index}>
-            <img src="/icons/shieldCheck.svg" alt="Feature Icon" />
+            <img
+              src="/icons/shieldCheck.svg"
+              alt="Feature Icon"
+              className="feature-icon"
+            />
             <h4>{point.title}</h4>
             <p>{point.description}</p>
           </div>

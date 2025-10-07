@@ -1,4 +1,3 @@
-// src/components/TrainingEducation.jsx
 import React from "react";
 import "./TrainingEducation.css";
 import Navbar from "../../components/Navbar/Navbar";
@@ -38,26 +37,17 @@ const trainingItems = [
 
 const TrainingEducation = () => {
   return (
-    <main>
+    <div className="training-page">
+      {/* ✅ Navbar */}
       <Navbar />
-      <section className="training-section">
-        <div className="training-content">
-          <div className="training-left">
-            <h2>Training and Education</h2>
-            <p>
-              At ACE Compliance Consulting, we provide self-paced and guided
-              training resources to help consultants stay compliant and
-              certified in HIPAA, Medicaid/Medicare policies, and state-level
-              PAS applications.
-            </p>
-          </div>
-          <div className="training-image">
-            <img
-              src="/images/training-and-education.png"
-              alt="Training Illustration"
-            />
-          </div>
-        </div>
+
+      <div className="training-content-wrapper">
+        <h1 className="training-title">Training & Education</h1>
+        <p className="training-intro">
+          At Ace Compliance Consulting, we provide guided and self-paced training
+          programs designed to empower consultants, caregivers, and administrators
+          in mastering compliance, operational excellence, and client engagement.
+        </p>
 
         <div className="training-grid">
           {trainingItems.map((item, idx) => (
@@ -67,8 +57,8 @@ const TrainingEducation = () => {
             </div>
           ))}
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 };
 

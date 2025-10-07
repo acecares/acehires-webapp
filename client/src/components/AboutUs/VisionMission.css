@@ -1,6 +1,6 @@
-/* === Background Setup === */
-.training-page {
-  background-image: url("../../../public/training-education.jpg"); /* replace xyz.jpg inside public */
+/* === Page Background === */
+.vision-page {
+  background-image: url("../../../public/vision.jpg"); /* replace xyz.jpg with your background */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,28 +11,28 @@
   padding-bottom: 60px;
 }
 
-/* === Main Content Wrapper === */
-.training-content-wrapper {
+/* === Content Container === */
+.vision-container {
   max-width: 1100px;
   width: 100%;
-  margin: 120px auto 0 auto; /* spacing below navbar */
+  margin: 120px auto 0 auto; /* space below navbar */
   /* background: rgba(255, 255, 255, 0.85); */
   border-radius: 16px;
-  padding: 30px 40px;
+  padding: 20px 40px;
   text-align: center;
-  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
-  /* backdrop-filter: blur(5px); */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
 }
 
 /* === Headings === */
-.training-title {
+.vision-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.training-intro {
+.vision-intro {
   font-size: 1.1rem;
   color: #fff;
   margin-bottom: 50px;
@@ -42,51 +42,57 @@
   line-height: 1.6;
 }
 
-/* === Training Grid === */
-.training-grid {
+/* === Vision & Mission Cards === */
+.vision-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
 }
 
-.training-card {
+.vision-card {
   background: rgba(3, 117, 76, 0.95);
   color: white;
-  padding: 25px;
+  padding: 30px;
   border-radius: 16px;
   transition: transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  text-align: left;
+  text-align: center;
 }
 
-.training-card h3 {
-  font-size: 1.3rem;
+.vision-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.vision-card h3 {
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.training-card p {
+.vision-card p {
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
-.training-card:hover {
+.vision-card:hover {
   transform: translateY(-5px);
   background: #025d3c;
 }
 
 /* === Responsive === */
 @media (max-width: 768px) {
-  .training-content-wrapper {
+  .vision-container {
     padding: 40px 20px;
     margin-top: 100px;
   }
 
-  .training-title {
+  .vision-title {
     font-size: 2rem;
   }
 
-  .training-card h3 {
+  .vision-card h3 {
     font-size: 1.2rem;
   }
 }
