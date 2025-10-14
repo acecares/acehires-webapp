@@ -1,7 +1,6 @@
 import React from "react";
 import "./Services.css";
-// import { useNavigate } from "react-router-dom";
-import Navbar from "../../components/Navbar/Navbar"; // ✅ Added Navbar import
+import Navbar from "../../components/Navbar/Navbar";
 
 const serviceItems = [
   {
@@ -51,7 +50,6 @@ const serviceItems = [
   },
 ];
 
-
 const Services = () => {
   return (
     <div className="services-page">
@@ -61,9 +59,9 @@ const Services = () => {
       {/* Content Section */}
       <div className="services-content">
         <h1 className="services-title">Our Consulting Services</h1>
-        <p className="services-subtitle">
+        {/* <p className="services-subtitle">
           Empowering agencies to achieve compliance excellence through strategic and customized consulting support.
-        </p>
+        </p> */}
 
         <div className="services-grid">
           {serviceItems.map((service, index) => (

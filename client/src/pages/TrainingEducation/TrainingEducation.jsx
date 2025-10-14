@@ -26,7 +26,7 @@ const trainingItems = [
   {
     title: "Consulting Training",
     description:
-      "Hands-on consulting techniques tailored for mental health and behavioral healthcare.",
+      "Hands-on consulting techniques tailored for Home healthcare services",
   },
   {
     title: "Education Consultant Training",
@@ -43,11 +43,6 @@ const TrainingEducation = () => {
 
       <div className="training-content-wrapper">
         <h1 className="training-title">Training & Education</h1>
-        <p className="training-intro">
-          At Ace Compliance Consulting, we provide guided and self-paced training
-          programs designed to empower consultants, caregivers, and administrators
-          in mastering compliance, operational excellence, and client engagement.
-        </p>
 
         <div className="training-grid">
           {trainingItems.map((item, idx) => (
