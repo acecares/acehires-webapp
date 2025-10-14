@@ -1,6 +1,7 @@
 import React from "react";
 import "./TrainingEducation.css";
 import Navbar from "../../components/Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const trainingItems = [
   {
@@ -36,6 +37,14 @@ const trainingItems = [
 ];
 
 const TrainingEducation = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (title) => {
+    if (title === "Consulting Training") {
+      navigate("/consulting-training");
+    }
+  };
+
   return (
     <div className="training-page">
       {/* ✅ Navbar */}
@@ -46,7 +55,15 @@ const TrainingEducation = () => {
 
         <div className="training-grid">
           {trainingItems.map((item, idx) => (
-            <div className="training-card" key={idx}>
+            <div
+              className="training-card"
+              key={idx}
+              onClick={() => handleCardClick(item.title)}
+              style={{
+                cursor:
+                  item.title === "Consulting Training" ? "pointer" : "default",
+              }}
+            >
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </div>

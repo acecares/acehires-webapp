@@ -25,6 +25,9 @@ import Contact from "./pages/Contact/Contact";
 import ApplyNursing from "./components/ApplyNursing";
 import ApplyNurseApplicant from "./components/ApplyNurseApplicant";
 import ApplyNurseConsultant from "./components/ApplyNurseConsultant";
+import ConsultingTraining from "./pages/ConsultingTraining/ConsultingTraining";
+
+
 
 
 
@@ -59,6 +62,7 @@ function App() {
         <Route path="/apply-nursing" element={<ApplyNursing />} />
         <Route path="/apply/nurseapplicant" element={<ApplyNurseApplicant />} />
         <Route path="/apply/nurseconsultant" element={<ApplyNurseConsultant />} />
+        <Route path="/consulting-training" element={<ConsultingTraining />} />
 
       </Routes>
     </Router>
