@@ -12,15 +12,15 @@ const AANNavbar = () => {
 
         <ul className="aan-navbar-links">
           <li><Link to="/apply-nursing">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/apply-nursing">Apply</Link></li>
-          <li><Link to="/vision">Mission & Vision</Link></li>
-          <li><Link to="/education">Training & Education</Link></li>
+          <li><Link to="https://www.homecarenursestaffing.com/healthcare-staffing-about-us">About</Link></li>
+          <li><Link to="https://www.homecarenursestaffing.com/healthcare-staffing-services/management-staff-placement">Services</Link></li>
+          <li><Link to="https://www.homecarenursestaffing.com/healthcare-staffing-services/rapid-visit-request-form">Apply</Link></li>
+          {/* <li><Link to="/vision">Mission & Vision</Link></li>
+          <li><Link to="/education">Training & Education</Link></li> */}
         </ul>
 
         <div className="aan-navbar-contact">
-          <Link to="/contact" className="aan-contact-button">Contact</Link>
+          <Link to="https://www.homecarenursestaffing.com/healthcare-staffing-contact-us" className="aan-contact-button">Contact</Link>
         </div>
       </div>
     </nav>
