@@ -8,13 +8,18 @@ import Navbar from "../../components/Navbar/Navbar";
 
 const ConsultingTraining = () => {
   const navigate = useNavigate();
-  const [visibleDoc, setVisibleDoc] = useState(null);
+  const [visibleDoc, setVisibleDoc] = useState("consulting"); // Default first doc visible
 
   const documents = [
     {
       id: "consulting",
       label: "Consulting Training Material",
       file: "/Consulting-Training.pdf",
+    },
+    {
+      id: "consulting2",
+      label: "Ace Compliance Consulting Guide",
+      file: "/Ace-Compliance-Consulting.pdf",
     },
   ];
 
@@ -31,7 +36,7 @@ const ConsultingTraining = () => {
           Hands-on consulting techniques tailored for Home Healthcare Services.
         </p>
 
-        {/* === Toggle Button Section === */}
+        {/* === Toggle Buttons === */}
         <div className="consulting-button-container">
           {documents.map((doc) => (
             <button
@@ -39,16 +44,14 @@ const ConsultingTraining = () => {
               className={`consulting-toggle-btn ${
                 visibleDoc === doc.id ? "active" : ""
               }`}
-              onClick={() =>
-                setVisibleDoc(visibleDoc === doc.id ? null : doc.id)
-              }
+              onClick={() => setVisibleDoc(doc.id)} // ✅ FIXED
             >
               {doc.label}
             </button>
           ))}
         </div>
 
-        {/* === PDF Viewer Section === */}
+        {/* === PDF Viewer === */}
         {selectedFile && (
           <div className="consulting-viewer">
             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">

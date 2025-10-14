@@ -135,3 +135,12 @@
     padding: 40px;
   }
 }
+.training-card-cta {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+.training-card-cta.disabled {
+  opacity: 0.6;
+}

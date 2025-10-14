@@ -1,0 +1,37 @@
+/* client/src/pages/Training/TrainingDetail.css */
+.training-detail-wrap {
+  min-height: 100vh;
+  background: #f6fbf9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.training-detail-inner {
+  width: min(1100px, 92%);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 28px 36px;
+  margin: 110px auto 60px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.training-detail-title {
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  font-weight: 800;
+  color: #0b513a;
+  margin-bottom: 8px;
+}
+
+.training-detail-sub {
+  color: #2d6b55;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.training-detail-hello {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #2c2c2c;
+  margin-top: 10px;
+}

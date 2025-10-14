@@ -27,6 +27,10 @@ import ApplyNurseApplicant from "./components/ApplyNurseApplicant";
 import ApplyNurseConsultant from "./components/ApplyNurseConsultant";
 import ConsultingTraining from "./pages/ConsultingTraining/ConsultingTraining";
 
+import ComplianceExcellence from "./pages/Training/ComplianceExcellence";
+import ClientEngagement from "./pages/Training/ClientEngagement";
+import DocumentationStandards from "./pages/Training/DocumentationStandards";
+import EducationConsultantTraining from "./pages/Training/EducationConsultantTraining";
 
 
 
@@ -63,6 +67,11 @@ function App() {
         <Route path="/apply/nurseapplicant" element={<ApplyNurseApplicant />} />
         <Route path="/apply/nurseconsultant" element={<ApplyNurseConsultant />} />
         <Route path="/consulting-training" element={<ConsultingTraining />} />
+        <Route path="/education/compliance-excellence" element={<ComplianceExcellence />} />
+<Route path="/education/client-engagement" element={<ClientEngagement />} />
+<Route path="/education/documentation-standards" element={<DocumentationStandards />} />
+<Route path="/education/education-consultant-training" element={<EducationConsultantTraining />} />
+
 
       </Routes>
     </Router>
