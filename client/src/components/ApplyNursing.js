@@ -23,7 +23,7 @@ const ApplyNursing = () => {
           <h2 className="apply-nursing-section-title">Steps in Your Application</h2>
 
           <h3 className="apply-nursing-subtitle">
-            Step 1: Download the Assessment Forms
+            Step 1: Download the Assessment Form
           </h3>
 
           <div className="apply-nursing-pdf-section">
