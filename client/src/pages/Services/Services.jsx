@@ -48,6 +48,23 @@ const serviceItems = [
     description:
       "Hands-on correction services to address compliance findings quickly.",
   },
+
+
+  {
+    title: "Survey Success Ready™ Program",
+    description:
+      "A comprehensive readiness system that ensures your agency passes surveys with success, zero delays, and total compliance confidence.",
+  },
+  {
+    title: "Startup Success Systems™",
+    description:
+      "A step-by-step launch framework that takes your home health, hospice, or home care agency from startup to licensed, certified, and revenue-ready",
+  },
+  {
+    title: "Agency Revenue Accelerator™",
+    description:
+      "A profit optimization program that identifies operational and billing gaps to maximize cash flow, boost margins, and drive predictable agency growth.",
+  },
 ];
 
 const Services = () => {
