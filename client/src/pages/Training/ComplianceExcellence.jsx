@@ -34,7 +34,7 @@ const ComplianceExcellence = () => {
             }`}
             onClick={() => setVisibleDoc(document.id)}
           >
-            Compliance xcellence
+            Compliance Excellence
           </button>
         </div>
 
