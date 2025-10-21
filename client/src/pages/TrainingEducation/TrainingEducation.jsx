@@ -6,13 +6,12 @@ import { useNavigate } from "react-router-dom";
 
 const trainingItems = [
   {
-    key: "fundamentals",
-    title: "Ace Compliance Consulting Fundamentals",
-    description:
-      "Core training to understand the mission, processes, and compliance foundation of ACE.",
-    // not clickable yet (no content)
-    path: null,
-  },
+  key: "fundamentals",
+  title: "Ace Compliance Consulting Fundamentals",
+  description:
+    "Core training to understand the mission, processes, and compliance foundation of ACE.",
+  path: "/education/fundamentals",   // ✅ new page route
+},
   {
     key: "compliance-excellence",
     title: "Compliance & Consulting Excellence",
@@ -47,7 +46,8 @@ const trainingItems = [
     description:
       "Specialized curriculum for education-focused consultants serving academic institutions.",
     path: "/education/education-consultant-training",
-  },
+  }
+  
 ];
 
 const TrainingEducation = () => {

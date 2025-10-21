@@ -31,6 +31,7 @@ import ComplianceExcellence from "./pages/Training/ComplianceExcellence";
 import ClientEngagement from "./pages/Training/ClientEngagement";
 import DocumentationStandards from "./pages/Training/DocumentationStandards";
 import EducationConsultantTraining from "./pages/Training/EducationConsultantTraining";
+import Fundamentals from "./pages/Training/Fundamentals";
 
 
 
@@ -71,6 +72,8 @@ function App() {
 <Route path="/education/client-engagement" element={<ClientEngagement />} />
 <Route path="/education/documentation-standards" element={<DocumentationStandards />} />
 <Route path="/education/education-consultant-training" element={<EducationConsultantTraining />} />
+<Route path="/education/fundamentals" element={<Fundamentals />} />
+
 
 
       </Routes>
