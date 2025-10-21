@@ -1,7 +1,7 @@
 import React from "react";
 import "./ApplyNursing.css";
 import { useNavigate } from "react-router-dom";
-import pdf1 from "../assets/Application_Employee_Part_1.pdf";
+// import pdf1 from "../assets/Application_Employee_Part_1.pdf";
 import pdf2 from "../assets/PERSONALITY_TEST_RVD_2023.pdf";
 import AANNavbar from "../../src/components/Navbar/AANNavbar";
 
@@ -23,24 +23,24 @@ const ApplyNursing = () => {
           <h2 className="apply-nursing-section-title">Steps in Your Application</h2>
 
           <h3 className="apply-nursing-subtitle">
-            Step 1: Download the Application and Assessment Forms
+            Step 1: Download the Assessment Forms
           </h3>
 
           <div className="apply-nursing-pdf-section">
-            <a href={pdf1} download className="apply-nursing-pdf-btn">
+            {/* <a href={pdf1} download className="apply-nursing-pdf-btn">
               📄 Download Application Form
-            </a>
+            </a> */}
             <a href={pdf2} download className="apply-nursing-pdf-btn">
               📄 Download Assessment Form
             </a>
           </div>
 
           <h3 className="apply-nursing-subtitle">
-            Step 2: Choose Your Application Type
+            Step 2: Fill The Application
           </h3>
 
           <div className="apply-nursing-card-section">
-            <div
+            {/* <div
               className="apply-nursing-card"
               onClick={() => navigate("/apply/nurseapplicant")}
             >
@@ -49,16 +49,16 @@ const ApplyNursing = () => {
                 For direct employment or client-side positions at healthcare
                 facilities across the U.S.
               </p>
-            </div>
+            </div> */}
 
             <div
               className="apply-nursing-card"
-              onClick={() => navigate("/apply/nurseconsultant")}
+              onClick={() => navigate("/apply/nurseapplicant")}
             >
-              <h3>Apply as a Nurse Consultant</h3>
+              <h3>Apply as a Nurse </h3>
               <p>
-                For consultants or healthcare professionals interested in
-                flexible or advisory roles.
+                For direct employment or client-side positions at healthcare
+                facilities across the U.S.
               </p>
             </div>
           </div>
