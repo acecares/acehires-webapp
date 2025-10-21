@@ -13,7 +13,7 @@ const SuccessCoachesPage = () => {
   const handleAgree = () => setAgreed(true);
 
   const documents = [
-    { id: "handbook", label: "Success Specialist role & Responsibilities", file: "/1-Success_Manager_Position_Description.pdf" },
+    { id: "handbook", label: "Success Coaches role & Responsibilities", file: "/1-Success_Manager_Position_Description.pdf" },
     { id: "onboarding", label: "Onboarding Form", file: "/Warm_Welcome.pdf" },
     { id: "compliance", label: "Team Member Success Guidelines", file: "/Employee-Onboarding-updated.pdf" },
     { id: "training", label: "Training Overview", file: "/Application_Employee_Part_4.pdf" },
