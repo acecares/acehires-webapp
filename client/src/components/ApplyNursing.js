@@ -36,7 +36,7 @@ const ApplyNursing = () => {
           </div>
 
           <h3 className="apply-nursing-subtitle">
-            Step 2: Fill The Application
+            Step 2: Fill The Application form below.
           </h3>
 
           <div className="apply-nursing-card-section">
@@ -61,11 +61,14 @@ const ApplyNursing = () => {
                 facilities across the U.S.
               </p>
             </div>
+            <h3 className="apply-nursing-subtitle">
+            Step 3: Complete the Quiz, <br></br>Which is linked once you submit the Application Form above
+          </h3>
           </div>
 
           <div className="apply-nursing-note">
             <p>
-              <strong>Note:</strong> Once submitted, a confirmation email will
+              <strong>Note:</strong> Once submitted both Form and Quiz, a confirmation email will
               be sent to you with next steps.
             </p>
           </div>
