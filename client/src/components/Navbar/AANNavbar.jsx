@@ -7,7 +7,7 @@ const AANNavbar = () => {
     <nav className="aan-navbar">
       <div className="aan-navbar-container">
         <div className="aan-navbar-logo">
-          <img src="/main-logo1.png" alt="logo" />
+          <img src="/all-american-medical-staffing-logo.png" alt="all-american-medical-staffing-logo.png" />
         </div>
 
         <ul className="aan-navbar-links">

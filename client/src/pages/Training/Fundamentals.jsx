@@ -13,7 +13,7 @@ const Fundamentals = () => {
   const document = {
     id: "doc",
     label: "Ace Compliance Consulting Fundamentals",
-    file: "/Ace-Compliance-Consulting-Fundamentals.pdf", // 
+    file: `${window.location.origin}/Ace-Compliance-Consulting-Fundamentals.pdf`, // 
   };
 
   return (
