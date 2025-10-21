@@ -1,0 +1,11 @@
+{
+  "root": "client/build/",
+  "routes": {
+    "/**": "index.html"
+  },
+  "headers": {
+    "/**/*.pdf": {
+      "Content-Type": "application/pdf"
+    }
+  }
+}
