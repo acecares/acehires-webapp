@@ -1,0 +1,79 @@
+.vm-container {
+    background:#f8f9fa;
+    padding:60px 0;
+    display:flex;
+    justify-content:center;
+  }
+  
+  .vm-wrapper {
+    width:90%;
+    max-width:900px;
+  }
+  
+  .vm-title {
+    text-align:center;
+    font-size:36px;
+    font-weight:700;
+    color:#c62828;
+    margin-bottom:40px;
+  }
+  
+  .vm-section {
+    margin-bottom:50px;
+  }
+  
+  .vm-heading {
+    font-size:28px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:25px;
+  }
+  
+  .vm-card {
+    background:white;
+    padding:25px 30px;
+    border-radius:12px;
+    margin-bottom:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .vm-subheading {
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#333;
+  }
+  
+  .vm-bold {
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  
+  .vm-italic {
+    font-style:italic;
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  
+  .vm-list {
+    margin-left:20px;
+    padding-left:15px;
+  }
+  
+  .vm-list li {
+    margin-bottom:8px;
+    font-size:16px;
+  }
+  
+  @media (max-width:600px) {
+    .vm-card {
+      padding:20px;
+    }
+    .vm-title {
+      font-size:30px;
+    }
+    .vm-heading {
+      font-size:24px;
+    }
+  }
+  

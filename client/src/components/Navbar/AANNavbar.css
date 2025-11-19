@@ -68,5 +68,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 18px;
+    font-size: 15px;
+  }
+
+  .aan-contact-button {
+    padding: 8px 20px;
+    font-size: 14px;
   }
 }

@@ -32,6 +32,9 @@ import ClientEngagement from "./pages/Training/ClientEngagement";
 import DocumentationStandards from "./pages/Training/DocumentationStandards";
 import EducationConsultantTraining from "./pages/Training/EducationConsultantTraining";
 import Fundamentals from "./pages/Training/Fundamentals";
+import VisionMissionAAN from "./pages/AAN/VisionMissionAAN";
+import AANServices from "./pages/AAN/AANServices";
+
 
 
 
@@ -73,6 +76,8 @@ function App() {
 <Route path="/education/documentation-standards" element={<DocumentationStandards />} />
 <Route path="/education/education-consultant-training" element={<EducationConsultantTraining />} />
 <Route path="/education/fundamentals" element={<Fundamentals />} />
+<Route path="/aan/vision" element={<VisionMissionAAN />} />
+<Route path="/aan/services" element={<AANServices />} />
 
 
 
