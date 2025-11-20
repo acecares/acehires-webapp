@@ -34,6 +34,7 @@ import EducationConsultantTraining from "./pages/Training/EducationConsultantTra
 import Fundamentals from "./pages/Training/Fundamentals";
 import VisionMissionAAN from "./pages/AAN/VisionMissionAAN";
 import AANServices from "./pages/AAN/AANServices";
+import AANOnboarding from "./pages/AAN/AANOnboarding";
 
 
 
@@ -78,6 +79,7 @@ function App() {
 <Route path="/education/fundamentals" element={<Fundamentals />} />
 <Route path="/aan/vision" element={<VisionMissionAAN />} />
 <Route path="/aan/services" element={<AANServices />} />
+<Route path="/aan/onboarding" element={<AANOnboarding />} />
 
 
 
