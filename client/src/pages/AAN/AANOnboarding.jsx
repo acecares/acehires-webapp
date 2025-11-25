@@ -12,6 +12,7 @@ const AANOnboarding = () => {
     overview: "/AAN-Role-Overview.pdf",
     modules: "/AAN-Orientation-Modules.pdf",
     expectations: "/AAN-Performance-Expectations.pdf",
+    tools: "/AAMS-Tools-and-Resources.pdf",
   };
 
   const handleDownloadChecklist = () => {
@@ -23,7 +24,7 @@ const AANOnboarding = () => {
 
   const handleVerifyCode = () => {
     if (accessCode.trim().toLowerCase() === "success") {
-      setTimeout(() => setCodeVerified(true), 150); // smooth transition
+      setTimeout(() => setCodeVerified(true), 150);
     } else {
       alert("Invalid Code. Please try again.");
     }
@@ -31,14 +32,11 @@ const AANOnboarding = () => {
 
   return (
     <div className="aan-onboard-wrapper">
-
-      {/* ===========================
-          ACCESS CODE MODAL FIRST
-      ============================ */}
+      
+      {/* ACCESS CODE MODAL */}
       {!codeVerified && (
         <div className="aan-code-modal-overlay">
           <div className="aan-code-modal">
-
             <h2 className="modal-title">Enter Access Code for Onboarding</h2>
 
             <input
@@ -65,18 +63,21 @@ const AANOnboarding = () => {
         </div>
       )}
 
-      {/* ===========================
-          TERMS MODAL SECOND
-      ============================ */}
+      {/* TERMS MODAL */}
       {codeVerified && !agreed && <TermsModal onAgree={() => setAgreed(true)} />}
 
-      {/* ===========================
-          MAIN ONBOARDING PAGE
-      ============================ */}
+      {/* MAIN CONTENT */}
       {codeVerified && agreed && (
         <div className="aan-onboard-content">
+          <div className="aan-logo-wrapper">
+              <img
+                src="/all-american-medical-staffing-logo.png"
+                alt="All American Logo"
+                className="aan-logo"
+              />
+            </div>
 
-          <h1 className="aan-main-title">All American Onboarding</h1>
+          {/* <h1 className="aan-main-title">All American Onboarding</h1> */}
 
           <section className="aan-section">
             <h2 className="aan-section-title">Intention & Outcome of Onboarding</h2>
@@ -110,9 +111,7 @@ const AANOnboarding = () => {
             </p>
           </section>
 
-          {/* ===========================
-              BUTTON BLOCK
-          ============================ */}
+          {/* BUTTON GRID */}
           <div className="aan-button-grid">
 
             <button
@@ -139,11 +138,16 @@ const AANOnboarding = () => {
             >
               Performance Expectations
             </button>
+
+            <button
+              className={`aan-btn ${activeTab === "tools" ? "active" : ""}`}
+              onClick={() => setActiveTab("tools")}
+            >
+              AAMS Tools & Resources
+            </button>
           </div>
 
-          {/* ===========================
-              PDF VIEWER
-          ============================ */}
+          {/* PDF VIEWER */}
           {activeTab && (
             <div className="aan-pdf-container">
               <iframe

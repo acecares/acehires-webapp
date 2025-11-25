@@ -1,204 +1,217 @@
-/* ========================================= */
-/* BACKGROUND WRAPPER */
-/* ========================================= */
+/* ------------------------------
+   MAIN WRAPPER
+--------------------------------*/
 .aan-onboard-wrapper {
-    min-height: 100vh;
-    background: #f4f5f7;
-    padding-bottom: 60px;
-  }
-  
-  /* ========================================= */
-  /* ACCESS CODE MODAL */
-  /* ========================================= */
-  .aan-code-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(6px);
-    background: rgba(0,0,0,0.45);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-  }
-  
-  .aan-code-modal {
-    background: #ffffff;
-    padding: 2.5rem;
-    border-radius: 18px;
-    width: 95%;
-    max-width: 480px;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
-    animation: modalPop 0.25s ease-out;
-    text-align: center;
-  }
-  
-  @keyframes modalPop {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
-  
-  .modal-title {
-    font-size: 1.55rem;
-    font-weight: 700;
-    margin-bottom: 18px;
-  }
-  
-  .aan-code-input {
-    width: 100%;
-    padding: 10px 14px;
-    border: 1.5px solid #d3d3d3;
-    border-radius: 8px;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.2s ease;
-  }
-  
-  .aan-code-input:focus {
-    border-color: #1976d2;
-  }
-  
-  .aan-code-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .verify-btn {
-    background: #1976d2;
-    padding: 10px 18px;
-    color: white;
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-  }
-  
-  .cancel-btn {
-    background: #e53935;
-    padding: 10px 18px;
-    color: white;
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-  }
-  
-  /* ========================================= */
-  /* MAIN CONTENT */
-  /* ========================================= */
-  .aan-onboard-content {
-    background: white;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 35px 40px;
-    border-radius: 14px;
-    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.1);
-  }
-  
-  .aan-main-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 800;
-    color: #c62828;
-    margin-bottom: 30px;
-  }
-  
-  .aan-section-title {
-    font-size: 1.45rem;
-    font-weight: 700;
-    color: #1d3b72;
-  }
-  
-  .aan-list {
-    margin-left: 20px;
-    line-height: 1.7;
-  }
-  
-  .aan-subtitle {
-    margin-top: 22px;
-    font-weight: 700;
-  }
-  
-  .aan-checkmarks {
-    margin-top: 18px;
-    font-size: 1.1rem;
-  }
-  
-  /* ========================================= */
-  /* BUTTON GRID */
-  /* ========================================= */
-  .aan-button-grid {
-    margin-top: 30px;
-    display: grid;
-    gap: 12px;
-  }
-  
-  .aan-btn {
-    background: #1976d2;
-    padding: 14px;
-    color: white;
-    border: none;
-    font-size: 1.05rem;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  
-  .aan-btn:hover {
-    background: #0d47a1;
-  }
-  
-  .aan-btn.active {
-    background: #0d47a1;
-    border: 2px solid #08306b;
-  }
-  
-  .aan-btn-download {
-    background: #00897b;
-    padding: 14px;
-    color: white;
-    border: none;
-    font-size: 1.05rem;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .aan-btn-download:hover {
-    background: #00695c;
-  }
-  
-/* ========================================= */
-/* FIXED RESPONSIVE PDF VIEWER */
-/* ========================================= */
+  padding: 20px;
+  background: #f7f9fb;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
 
+/* ------------------------------
+   ACCESS CODE MODAL
+--------------------------------*/
+.aan-code-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.aan-code-modal {
+  background: white;
+  width: 420px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.aan-code-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cfd6df;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.aan-code-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.verify-btn {
+  background: #2563eb;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.verify-btn:hover { background: #1d4ed8; }
+
+.cancel-btn {
+  background: #e53935;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.cancel-btn:hover { background: #c62828; }
+
+/* ------------------------------
+   MAIN CONTENT
+--------------------------------*/
+.aan-onboard-content {
+  width: 900px;
+  max-width: 100%;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.aan-main-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  color: #b91c1c;
+  margin-bottom: 25px;
+}
+
+/* ------------------------------
+   CONTENT SECTION
+--------------------------------*/
+.aan-section-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 12px;
+}
+
+.aan-section p {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.aan-list {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.aan-list li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.aan-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.aan-checkmarks {
+  margin-top: 18px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.7;
+  color: #15803d;
+}
+
+/* ------------------------------
+   BUTTON GRID
+--------------------------------*/
+.aan-button-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.aan-btn {
+  background: #2563eb;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.aan-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.aan-btn.active {
+  background: #0d47a1;
+}
+
+.aan-btn-download {
+  background: #9333ea;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.aan-btn-download:hover {
+  background: #7e22ce;
+}
+
+/* ------------------------------
+   PDF VIEWER
+--------------------------------*/
 .aan-pdf-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
-    height: calc(100vh - 200px); /* auto-fit based on screen */
-    background: #f0f2f5;
-    border: 1px solid #d9d9d9;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  
-  .aan-pdf-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-  
-  /* Mobile optimization */
-  @media (max-width: 768px) {
-    .aan-pdf-container {
-      height: calc(100vh - 150px);
-    }
-  }
-  
-  
+  /* margin-top: 35px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1); */
+}
+
+.aan-pdf-iframe {
+  width: 100%;
+  height: 750px;
+  border: none;
+}
+.aan-logo-wrapper {
+  /* width: 100%; */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.aan-logo {
+  /* width: 180px;          Adjust size as you like */
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
