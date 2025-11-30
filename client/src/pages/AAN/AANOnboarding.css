@@ -1,217 +1,114 @@
-/* ------------------------------
-   MAIN WRAPPER
---------------------------------*/
-.aan-onboard-wrapper {
-  padding: 20px;
-  background: #f7f9fb;
-  min-height: 100vh;
-  font-family: "Inter", sans-serif;
+/* MAIN PAGE WRAPPER */
+.aan-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
 }
 
-/* ------------------------------
-   ACCESS CODE MODAL
---------------------------------*/
-.aan-code-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.aan-code-modal {
-  background: white;
-  width: 420px;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  text-align: center;
-}
-
-.modal-title {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.aan-code-input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #cfd6df;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.aan-code-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.verify-btn {
-  background: #2563eb;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-size: 15px;
-  color: white;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.verify-btn:hover { background: #1d4ed8; }
-
-.cancel-btn {
-  background: #e53935;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-size: 15px;
-  color: white;
-  cursor: pointer;
-}
-
-.cancel-btn:hover { background: #c62828; }
-
-/* ------------------------------
-   MAIN CONTENT
---------------------------------*/
-.aan-onboard-content {
-  width: 900px;
-  max-width: 100%;
-  margin: 40px auto;
-  background: white;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.aan-main-title {
-  text-align: center;
-  font-size: 34px;
-  font-weight: 700;
-  color: #b91c1c;
-  margin-bottom: 25px;
-}
-
-/* ------------------------------
-   CONTENT SECTION
---------------------------------*/
-.aan-section-title {
-  font-size: 26px;
-  font-weight: 700;
-  color: #1e40af;
-  margin-bottom: 12px;
-}
-
-.aan-section p {
-  font-size: 17px;
-  color: #444;
-  line-height: 1.6;
-}
-
-.aan-list {
-  margin-top: 12px;
-  margin-bottom: 20px;
-  padding-left: 20px;
-}
-
-.aan-list li {
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.aan-subtitle {
-  font-size: 20px;
-  font-weight: 600;
-  color: #0f172a;
-  margin-top: 28px;
-  margin-bottom: 12px;
-}
-
-.aan-checkmarks {
-  margin-top: 18px;
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 1.7;
-  color: #15803d;
-}
-
-/* ------------------------------
-   BUTTON GRID
---------------------------------*/
-.aan-button-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  margin-top: 35px;
-}
-
-.aan-btn {
-  background: #2563eb;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: 600;
-  transition: background 0.2s, transform 0.1s;
-}
-
-.aan-btn:hover {
-  background: #1d4ed8;
-  transform: translateY(-1px);
-}
-
-.aan-btn.active {
-  background: #0d47a1;
-}
-
-.aan-btn-download {
-  background: #9333ea;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.aan-btn-download:hover {
-  background: #7e22ce;
-}
-
-/* ------------------------------
-   PDF VIEWER
---------------------------------*/
-.aan-pdf-container {
-  /* margin-top: 35px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1); */
-}
-
-.aan-pdf-iframe {
-  width: 100%;
-  height: 750px;
-  border: none;
-}
+/* LOGO */
 .aan-logo-wrapper {
-  /* width: 100%; */
   text-align: center;
   margin-bottom: 10px;
 }
 
 .aan-logo {
-  /* width: 180px;          Adjust size as you like */
+  width: 200px;
   height: auto;
+}
+
+/* MAIN TITLE */
+.aan-main-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  color: #c62828;
+  margin-bottom: 30px;
+}
+
+/* INFO BOX */
+.aan-info-box {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.aan-info-box h2, 
+.aan-info-box h3 {
+  color: #003366;
   margin-bottom: 10px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.aan-info-box ul {
+  margin-left: 20px;
+}
+
+.aan-checklist li {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* BUTTONS */
+.aan-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.aan-pdf-button {
+  width: 100%;
+  padding: 16px;
+  background: #1e56d9;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.aan-pdf-button:hover {
+  background: #003fad;
+}
+
+/* Purple download button */
+.aan-download-btn {
+  background: #8c34ea;
+}
+
+.aan-download-btn:hover {
+  background: #6b22b5;
+}
+
+/* VIEW-ONLY PDF VIEWER */
+.aan-pdf-viewer-container {
+  height: 700px;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 40px;
+}
+
+/* CHECKLIST DOWNLOAD SECTION */
+.aan-download-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.aan-direct-download-link {
+  display: inline-block;
+  background: #8c34ea;
+  color: white;
+  padding: 14px 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.aan-direct-download-link:hover {
+  background: #6b22b5;
 }

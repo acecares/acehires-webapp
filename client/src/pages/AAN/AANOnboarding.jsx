@@ -1,162 +1,125 @@
 import React, { useState } from "react";
-import TermsModal from "../../components/TermsModal";
 import "./AANOnboarding.css";
+import { Worker, Viewer } from "@react-pdf-viewer/core";
+import "@react-pdf-viewer/core/lib/styles/index.css";
 
 const AANOnboarding = () => {
-  const [codeVerified, setCodeVerified] = useState(false);
-  const [agreed, setAgreed] = useState(false);
-  const [accessCode, setAccessCode] = useState("");
-  const [activeTab, setActiveTab] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
 
-  const pdfFiles = {
-    overview: "/AAN-Role-Overview.pdf",
-    modules: "/AAN-Orientation-Modules.pdf",
-    expectations: "/AAN-Performance-Expectations.pdf",
-    tools: "/AAMS-Tools-and-Resources.pdf",
-  };
-
-  const handleDownloadChecklist = () => {
-    const link = document.createElement("a");
-    link.href = "/Onboarding-Activities-Checklist.pdf";
-    link.download = "Onboarding-Activities-Checklist.pdf";
-    link.click();
-  };
-
-  const handleVerifyCode = () => {
-    if (accessCode.trim().toLowerCase() === "success") {
-      setTimeout(() => setCodeVerified(true), 150);
-    } else {
-      alert("Invalid Code. Please try again.");
-    }
-  };
+  const pdfButtons = [
+    {
+      id: "role",
+      label: "Role Overview",
+      file: "/AAN-Role-Overview.pdf",
+      downloadable: false,
+    },
+    {
+      id: "orientation",
+      label: "Orientation Training Modules",
+      file: "/AAN-Orientation-Modules.pdf",
+      downloadable: false,
+    },
+    {
+      id: "checklist",
+      label: "⬇ Onboarding Activities & Checklist (PDF)",
+      file: "/Onboarding-Activities-Checklist.pdf",
+      downloadable: true, // ONLY THIS ONE DOWNLOADS
+    },
+    {
+      id: "performance",
+      label: "Performance Expectations",
+      file: "/AAN-Performance-Expectations.pdf",
+      downloadable: false,
+    },
+    {
+      id: "tools",
+      label: "AAMS Tools & Resources",
+      file: "/AAMS-Tools-and-Resources.pdf",
+      downloadable: false,
+    },
+  ];
 
   return (
-    <div className="aan-onboard-wrapper">
-      
-      {/* ACCESS CODE MODAL */}
-      {!codeVerified && (
-        <div className="aan-code-modal-overlay">
-          <div className="aan-code-modal">
-            <h2 className="modal-title">Enter Access Code for Onboarding</h2>
+    <div className="aan-container">
+      {/* Logo */}
+      <div className="aan-logo-wrapper">
+        <img
+          src="/all-american-medical-staffing-logo.png"
+          alt="AAMS Logo"
+          className="aan-logo"
+        />
+      </div>
 
-            <input
-              type="text"
-              className="aan-code-input"
-              placeholder="Enter access code"
-              value={accessCode}
-              onChange={(e) => setAccessCode(e.target.value)}
-            />
+      <h1 className="aan-main-title">All American Onboarding</h1>
 
-            <div className="aan-code-buttons">
-              <button className="verify-btn" onClick={handleVerifyCode}>
-                Verify & Continue
-              </button>
+      {/* ONBOARDING TEXT SECTION */}
+      <div className="aan-info-box">
+        <h2>Intention & Outcome of Onboarding</h2>
+        <p>
+          The purpose of this onboarding is to ensure you confidently step into
+          the field as an <strong>All American Medical Staffing Survey-Ready Nurse™</strong>,
+          delivering:
+        </p>
 
-              <button
-                className="cancel-btn"
-                onClick={() => (window.location.href = "/aan")}
-              >
-                Cancel
-              </button>
-            </div>
+        <ul>
+          <li>High-quality, compliant care</li>
+          <li>Timely, accurate documentation</li>
+          <li>Professional, aligned representation of our brand and values</li>
+        </ul>
+
+        <h3>Expected Time to Complete Onboarding</h3>
+        <ul>
+          <li><strong>Day 1:</strong> Welcome, setup, handbook, portal access</li>
+          <li><strong>Days 2–3:</strong> Compliance, documentation, operations training</li>
+          <li><strong>Days 3–5:</strong> Shadowing, chart review, skill verification</li>
+          <li><strong>Week 1:</strong> First assignment & QA introduction</li>
+          <li><strong>Month 1:</strong> Fully integrated Survey-Ready Nurse™</li>
+        </ul>
+
+        <h3>You will be:</h3>
+        <ul className="aan-checklist">
+          <li>✔ Confident</li>
+          <li>✔ Competent</li>
+          <li>✔ Compliant</li>
+          <li>✔ Ready to represent the All-American brand with excellence</li>
+        </ul>
+      </div>
+
+      {/* BUTTONS */}
+      <div className="aan-buttons-wrapper">
+        {pdfButtons.map((btn) => (
+          <button
+            key={btn.id}
+            className={`aan-pdf-button ${
+              btn.downloadable ? "aan-download-btn" : ""
+            }`}
+            onClick={() => setSelectedFile(btn.file)}
+          >
+            {btn.label}
+          </button>
+        ))}
+      </div>
+
+      {/* VIEW-ONLY PDF VIEWER (for all except checklist) */}
+      {selectedFile &&
+        selectedFile !== "/Onboarding-Activities-Checklist.pdf" && (
+          <div className="aan-pdf-viewer-container">
+            <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
+              <Viewer fileUrl={selectedFile} />
+            </Worker>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* TERMS MODAL */}
-      {codeVerified && !agreed && <TermsModal onAgree={() => setAgreed(true)} />}
-
-      {/* MAIN CONTENT */}
-      {codeVerified && agreed && (
-        <div className="aan-onboard-content">
-          <div className="aan-logo-wrapper">
-              <img
-                src="/all-american-medical-staffing-logo.png"
-                alt="All American Logo"
-                className="aan-logo"
-              />
-            </div>
-
-          {/* <h1 className="aan-main-title">All American Onboarding</h1> */}
-
-          <section className="aan-section">
-            <h2 className="aan-section-title">Intention & Outcome of Onboarding</h2>
-
-            <p>
-              The purpose of this onboarding is to ensure you confidently step into the field as an
-              <strong> All American Medical Staffing Survey-Ready Nurse™</strong>, delivering:
-            </p>
-
-            <ul className="aan-list">
-              <li>High-quality, compliant care</li>
-              <li>Timely, accurate documentation</li>
-              <li>Professional, aligned representation of our brand and values</li>
-            </ul>
-
-            <h3 className="aan-subtitle">Expected Time to Complete Onboarding</h3>
-
-            <ul className="aan-list">
-              <li><strong>Day 1:</strong> Welcome, setup, handbook, portal access</li>
-              <li><strong>Days 2–3:</strong> Compliance, documentation, operations training</li>
-              <li><strong>Days 3–5:</strong> Shadowing, chart review, skill verification</li>
-              <li><strong>Week 1:</strong> First assignment & QA introduction</li>
-              <li><strong>Month 1:</strong> Fully integrated Survey-Ready Nurse™</li>
-            </ul>
-
-            <p className="aan-checkmarks">
-              ✔ Confident <br />
-              ✔ Competent <br />
-              ✔ Compliant <br />
-              ✔ Ready to represent the All-American brand with excellence
-            </p>
-          </section>
-
-          {/* BUTTON GRID */}
-          <div className="aan-button-grid">
-
-            <button
-              className={`aan-btn ${activeTab === "overview" ? "active" : ""}`}
-              onClick={() => setActiveTab("overview")}
-            >
-              Role Overview
-            </button>
-
-            <button
-              className={`aan-btn ${activeTab === "modules" ? "active" : ""}`}
-              onClick={() => setActiveTab("modules")}
-            >
-              Orientation Training Modules
-            </button>
-
-            <button className="aan-btn-download" onClick={handleDownloadChecklist}>
-              ⬇ Onboarding Activities & Checklist (PDF)
-            </button>
-
-            <button
-              className={`aan-btn ${activeTab === "expectations" ? "active" : ""}`}
-              onClick={() => setActiveTab("expectations")}
-            >
-              Performance Expectations
-            </button>
-
-            <button
-              className={`aan-btn ${activeTab === "tools" ? "active" : ""}`}
-              onClick={() => setActiveTab("tools")}
-            >
-              AAMS Tools & Resources
-            </button>
-          </div>
-
-          {/* PDF VIEWER */}
-          {activeTab && (
-            <div className="aan-pdf-container">
-              <iframe
-                src={pdfFiles[activeTab]}
-                title="PDF Viewer"
-                className="aan-pdf-iframe"
-              />
-            </div>
-          )}
+      {/* DOWNLOAD ONLY FOR CHECKLIST */}
+      {selectedFile === "/Onboarding-Activities-Checklist.pdf" && (
+        <div className="aan-download-section">
+          <a
+            href={selectedFile}
+            download
+            className="aan-direct-download-link"
+          >
+            Click to download the Onboarding Activities & Checklist PDF
+          </a>
         </div>
       )}
     </div>
