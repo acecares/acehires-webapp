@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TermsModal from "../../components/TermsModal";
+import "./AANOnboarding.css";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import "./AANOnboarding.css";
 
 const AANOnboarding = () => {
   const [codeVerified, setCodeVerified] = useState(false);
@@ -10,92 +10,126 @@ const AANOnboarding = () => {
   const [accessCode, setAccessCode] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
 
-  const pdfButtons = [
-    {
-      id: "role",
-      label: "Role Overview",
-      file: "/AAN-Role-Overview.pdf",
-      downloadable: false,
-    },
+  // 🔁 PAGE-SPECIFIC FAVICON + TITLE (no Helmet)
+  useEffect(() => {
+    const originalTitle = document.title;
+
+    // Try to find an existing favicon (<link rel="icon" ...>)
+    let faviconEl =
+      document.querySelector("link[rel='icon']") ||
+      document.querySelector("link[rel='shortcut icon']");
+
+    let originalHref = null;
+
+    if (faviconEl) {
+      originalHref = faviconEl.getAttribute("href");
+      faviconEl.setAttribute(
+        "href",
+        "/all-american-medical-staffing-logo.png?v=3"
+      );
+    } else {
+      // If none exists, create one
+      faviconEl = document.createElement("link");
+      faviconEl.rel = "icon";
+      faviconEl.type = "image/png";
+      faviconEl.href = "/all-american-medical-staffing-logo.png?v=3";
+      document.head.appendChild(faviconEl);
+    }
+
+    document.title = "AAN Onboarding – All American Medical Staffing";
+
+    // Restore previous favicon + title when leaving this page
+    return () => {
+      if (faviconEl && originalHref) {
+        faviconEl.setAttribute("href", originalHref);
+      }
+      document.title = originalTitle;
+    };
+  }, []);
+
+  const pdfFiles = {
+    role: "/AAN-Role-Overview.pdf",
+    orientation: "/AAN-Orientation-Modules.pdf",
+    checklist: "/Onboarding-Activities-Checklist.pdf",
+    performance: "/AAN-Performance-Expectations.pdf",
+    tools: "/AAMS-Tools-and-Resources.pdf",
+  };
+
+  const buttons = [
+    { id: "role", label: "Role Overview", file: pdfFiles.role },
     {
       id: "orientation",
       label: "Orientation Training Modules",
-      file: "/AAN-Orientation-Modules.pdf",
-      downloadable: false,
+      file: pdfFiles.orientation,
     },
     {
       id: "checklist",
       label: "⬇ Onboarding Activities & Checklist (PDF)",
-      file: "/Onboarding-Activities-Checklist.pdf",
+      file: pdfFiles.checklist,
       downloadable: true,
     },
     {
       id: "performance",
       label: "Performance Expectations",
-      file: "/AAN-Performance-Expectations.pdf",
-      downloadable: false,
+      file: pdfFiles.performance,
     },
-    {
-      id: "tools",
-      label: "AAMS Tools & Resources",
-      file: "/AAMS-Tools-and-Resources.pdf",
-      downloadable: false,
-    },
+    { id: "tools", label: "AAMS Tools & Resources", file: pdfFiles.tools },
   ];
 
   const handleVerifyCode = () => {
     if (accessCode.trim().toLowerCase() === "success") {
-      setTimeout(() => setCodeVerified(true), 200);
+      setTimeout(() => setCodeVerified(true), 150);
     } else {
       alert("Invalid Code. Please try again.");
     }
   };
 
+  const downloadChecklist = () => {
+    const link = document.createElement("a");
+    link.href = pdfFiles.checklist;
+    link.download = "Onboarding-Activities-Checklist.pdf";
+    link.click();
+  };
+
   return (
-    <div className="aan-container">
-
-      {/* =====================================
-          ACCESS CODE AUTHENTICATION MODAL
-      ======================================= */}
+    <div className="aan-wrapper">
+      {/* ACCESS CODE SCREEN */}
       {!codeVerified && (
-        <div className="aan-auth-overlay">
-          <div className="aan-auth-modal">
-
-            <h2 className="aan-auth-title">Enter Access Code for Onboarding</h2>
+        <div className="aan-access-overlay">
+          <div className="aan-access-box">
+            <h2 className="aan-access-title">Enter Access Code for Onboarding</h2>
 
             <input
               type="text"
-              className="aan-auth-input"
+              className="aan-access-input"
               placeholder="Enter access code"
               value={accessCode}
               onChange={(e) => setAccessCode(e.target.value)}
             />
 
-            <div className="aan-auth-btn-row">
-              <button className="aan-auth-verify" onClick={handleVerifyCode}>
+            <div className="aan-access-buttons">
+              <button onClick={handleVerifyCode} className="aan-access-verify-btn">
                 Verify & Continue
               </button>
 
               <button
-                className="aan-auth-cancel"
                 onClick={() => (window.location.href = "/aan")}
+                className="aan-access-cancel-btn"
               >
                 Cancel
               </button>
             </div>
-
           </div>
         </div>
       )}
 
-      {/* TERMS & CONDITIONS MODAL */}
+      {/* TERMS MODAL */}
       {codeVerified && !agreed && <TermsModal onAgree={() => setAgreed(true)} />}
 
-      {/* =====================================
-          MAIN CONTENT (Shown after all checks)
-      ======================================= */}
+      {/* MAIN CONTENT */}
       {codeVerified && agreed && (
-        <>
+        <div className="aan-content">
+          {/* LOGO */}
           <div className="aan-logo-wrapper">
             <img
               src="/all-american-medical-staffing-logo.png"
@@ -104,73 +138,135 @@ const AANOnboarding = () => {
             />
           </div>
 
-          <h1 className="aan-main-title">All American Onboarding</h1>
+          {/* BANNER */}
+          <div className="aan-banner">
+            <img
+              src="/onboarding-banner.jpg"
+              alt="Onboarding Banner"
+              className="aan-banner-img"
+            />
+            <h1 className="aan-banner-text">
+              Welcome to All American Medical Staffing Onboarding
+            </h1>
+          </div>
 
-          {/* INFO BLOCK */}
-          <div className="aan-info-box">
-            <h2>Intention & Outcome of Onboarding</h2>
-            <p>
-              The purpose of this onboarding is to ensure you confidently step into
-              the field as an <strong>All American Medical Staffing Survey-Ready Nurse™</strong>,
-              delivering:
-            </p>
+          {/* SECTION 1: TEXT LEFT, IMAGE RIGHT */}
+          <div className="aan-section-row">
+            <div className="aan-text-block">
+              <h2>Intention & Outcome of Onboarding</h2>
+              <p>
+                The purpose of this onboarding is to ensure you confidently step
+                into the field as an{" "}
+                <strong>All American Medical Staffing Survey-Ready Nurse™</strong>{" "}
+                delivering:
+              </p>
 
-            <ul>
-              <li>High-quality, compliant care</li>
-              <li>Timely, accurate documentation</li>
-              <li>Professional, aligned representation of our brand and values</li>
-            </ul>
+              <ul>
+                <li>High-quality, compliant care</li>
+                <br></br>
+                <li>Timely, accurate documentation</li>
+                <br></br>
+                <li>
+                  Professional, aligned representation of our brand and values
+                </li>
+              </ul>
+            </div>
 
-            <h3>Expected Time to Complete Onboarding</h3>
-            <ul>
-              <li><strong>Day 1:</strong> Welcome, setup, handbook, portal access</li>
-              <li><strong>Days 2–3:</strong> Compliance, documentation, operations training</li>
-              <li><strong>Days 3–5:</strong> Shadowing, chart review, skill verification</li>
-              <li><strong>Week 1:</strong> First assignment & QA introduction</li>
-              <li><strong>Month 1:</strong> Fully integrated Survey-Ready Nurse™</li>
-            </ul>
+            <div className="aan-img-block">
+              <img src="/nursing-three-male-nurse.jpg" alt="Nurses" />
+            </div>
+          </div>
 
-            <h3>You will be:</h3>
-            <ul className="aan-checklist">
+          {/* SECTION 2: IMAGE LEFT, TEXT RIGHT */}
+          <div className="aan-section-row reverse">
+            <div className="aan-img-block">
+              <img src="/nursing-items.jpg" alt="Nursing Items" />
+            </div>
+
+            <div className="aan-text-block">
+              <h2>Expected Time to Complete Onboarding</h2>
+
+              <ul>
+                <li>
+                  <strong>Day 1:</strong> Welcome, setup, handbook, portal access
+                </li>
+                <br></br>
+                <li>
+                  <strong>Days 2–3:</strong> Compliance, documentation, operations
+                  training
+                </li>
+                <br></br>
+                <li>
+                  <strong>Days 3–5:</strong> Shadowing, chart review, skill
+                  verification
+                </li>
+                <br></br>
+                <li>
+                  <strong>Week 1:</strong> First assignment & QA introduction
+                </li>
+                <br></br>
+                <li>
+                  <strong>Month 1:</strong> Fully integrated Survey-Ready Nurse™
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* CENTERED CARD */}
+          <div className="aan-centered-card remove-bullets">
+            <h2 className="aan-centered-title">You will be:</h2>
+
+            <ul className="aan-centered-checklist">
               <li>✔ Confident</li>
               <li>✔ Competent</li>
               <li>✔ Compliant</li>
-              <li>✔ Ready to represent the All-American brand with excellence</li>
+              <li>
+                ✔ Ready to represent the All-American brand with excellence
+              </li>
             </ul>
           </div>
 
-          {/* BUTTONS */}
-          <div className="aan-buttons-wrapper">
-            {pdfButtons.map((btn) => (
-              <button
-                key={btn.id}
-                className={`aan-pdf-button ${btn.downloadable ? "aan-download-btn" : ""}`}
-                onClick={() => setSelectedFile(btn.file)}
-              >
-                {btn.label}
-              </button>
-            ))}
-          </div>
-
-          {/* PDF Viewer */}
-          {selectedFile &&
-            selectedFile !== "/Onboarding-Activities-Checklist.pdf" && (
-              <div className="aan-pdf-viewer-container">
-                <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-                  <Viewer fileUrl={selectedFile} />
-                </Worker>
-              </div>
-            )}
-
-          {/* Download-only */}
-          {selectedFile === "/Onboarding-Activities-Checklist.pdf" && (
-            <div className="aan-download-section">
-              <a href={selectedFile} download className="aan-direct-download-link">
-                Click to download the Onboarding Activities & Checklist PDF
-              </a>
+          {/* BUTTONS + PDF VIEWER */}
+          <div className="aan-pdf-section">
+            {/* LEFT: BUTTONS */}
+            <div className="aan-button-column">
+              {buttons.map((btn) =>
+                btn.downloadable ? (
+                  <button
+                    key={btn.id}
+                    className="aan-btn green"
+                    onClick={downloadChecklist}
+                  >
+                    {btn.label}
+                  </button>
+                ) : (
+                  <button
+                    key={btn.id}
+                    className="aan-btn red"
+                    onClick={() => setSelectedFile(btn.file)}
+                  >
+                    {btn.label}
+                  </button>
+                )
+              )}
             </div>
-          )}
-        </>
+
+            {/* RIGHT: PDF VIEWER AREA */}
+            <div className="aan-pdf-viewer-wrapper">
+              <div className="aan-pdf-scroll-area">
+                {selectedFile ? (
+                  <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
+                    <Viewer fileUrl={selectedFile} />
+                  </Worker>
+                ) : (
+                  <div className="aan-empty-pdf">
+                    <p>Select a document to begin viewing</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
