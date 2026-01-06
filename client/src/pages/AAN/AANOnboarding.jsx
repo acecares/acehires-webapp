@@ -25,7 +25,7 @@ const AANOnboarding = () => {
       originalHref = faviconEl.getAttribute("href");
       faviconEl.setAttribute(
         "href",
-        "/all-american-medical-staffing-logo.png?v=3"
+        "/All_American_heart.png?v=3"
       );
     } else {
       // If none exists, create one

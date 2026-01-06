@@ -1,8 +1,8 @@
 import React from 'react';
 import './Apply.css';
 import { useNavigate } from 'react-router-dom';
-import pdf1 from '../assets/Application_Employee_Part_1.pdf';
-import pdf2 from '../assets/PERSONALITY_TEST_RVD_2023.pdf';
+// import pdf1 from '../assets/Application_Employee_Part_1.pdf';
+// import pdf2 from '../assets/PERSONALITY_TEST_RVD_2023.pdf';
 
 const Apply = () => {
   const navigate = useNavigate();
@@ -28,14 +28,14 @@ const Apply = () => {
             <li>🤝 Contact <a href="mailto:support@acecompliance.org" rel="noopener noreferrer">support@acecompliance.org</a> for help</li> */}
           </ul>
      </div>
-      <h3>Steps 1 : Download the Application and Assessment Forms below</h3>
+      <h3>Steps 1 : Fill the form by clicking on this buttons below based on your profile and attach requested documents before submitting the application form </h3>
      
-       <div className="pdf-section">
+       {/* <div className="pdf-section">
         <a href={pdf1} download className="pdf-button">📄 Download Application Form</a>
         <a href={pdf2} download className="pdf-button">📄 Download Assessment Form</a>
-      </div>
+      </div> */}
       <br></br>
-       <h3>Steps 2 : Fill the form by clicking on this buttons below based on your profile and attach these files while submitting</h3>
+       <h3>Steps 2 : Complete all 3 Personality Test</h3>
       <div className="card-section">
         <div className="apply-card" onClick={() => navigate('/apply/applicant')}>
           <h3>Apply as an Applicant</h3>
