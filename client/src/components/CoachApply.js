@@ -23,23 +23,24 @@ const CoachApply = () => {
 
         <div className="form-container">
           <iframe
-            src="https://api.leadconnectorhq.com/widget/form/AFeUyNjZk2PCDY8S0uHt"
-            style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
-            id="inline-AFeUyNjZk2PCDY8S0uHt"
-            data-version="2"
-            data-layout='{"id":"INLINE"}'
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Coach Hiring Form – ACE"
-            data-height="1504"
-            data-layout-iframe-id="inline-AFeUyNjZk2PCDY8S0uHt"
-            data-form-id="AFeUyNjZk2PCDY8S0uHt"
-            title="Coach Hiring Form – ACE"
-          ></iframe>
+        src="https://api.leadconnectorhq.com/widget/form/4lLks3fyAiGebv6VLPOE"
+        // style="width:100%;height:100%;border:none;border-radius:4px"
+        id="inline-4lLks3fyAiGebv6VLPOE" 
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Coach Hiring Form – ACE"
+        data-height="14142"
+        data-layout-iframe-id="inline-4lLks3fyAiGebv6VLPOE"
+        data-form-id="4lLks3fyAiGebv6VLPOE"
+        title="Coach Hiring Form – ACE"
+            >
+    </iframe>
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
           <script src="https://link.msgsndr.com/js/form_embed.js"></script>
         </div>
       </div>

@@ -11,9 +11,21 @@ const AboutHero = () => {
           alt="Ace Compliance Consulting"
           className="about-banner-image"
         />
+
+        {/* UPDATED HERO OVERLAY (same style as the services heading you liked) */}
         <div className="about-banner-overlay">
-          <h1>About Us</h1>
-          <p>Strategic Processes & Systems for Success</p>
+          <p className="about-kicker">ACE SUCCESS TEAM</p>
+
+          <h1 className="about-hero-title">
+            <span className="about-title-dark">About</span>{" "}
+            <span className="about-title-green">Us</span>
+          </h1>
+
+          <div className="about-hero-underline" />
+
+          <p className="about-hero-subtitle">
+            Strategic Processes &amp; Systems for Success
+          </p>
         </div>
       </div>
 
@@ -38,10 +50,7 @@ const AboutHero = () => {
         </div>
 
         <div className="about-image">
-          <img
-            src="/about-us-mid-img.jpg"
-            alt="Ace Compliance Consulting Team"
-          />
+          <img src="/CHARLENE-TAYLOR.png" alt="Ace Compliance Consulting Team" />
         </div>
       </section>
 
@@ -50,7 +59,7 @@ const AboutHero = () => {
         <div className="difference-text">
           <h2>Experience the Difference of Stress-Free Surveys</h2>
           <p>
-            The consulting company you choose to start your business matters.  
+            The consulting company you choose to start your business matters.
             When you choose Ace, you choose success. Make your decision today to
             partner with Ace Compliance Consulting — where we lead your vision
             with precision.

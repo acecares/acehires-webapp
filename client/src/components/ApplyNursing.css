@@ -4,7 +4,6 @@ body {
   box-sizing: border-box;
 }
 
-
 /* === Page Background === */
 .apply-nursing-page {
   background-image: url("../../public/nurse-bg-1.jpg"); /* Keep your background image */
@@ -46,6 +45,13 @@ body {
   font-weight: 700;
   color: #c01313;
   margin-bottom: 10px;
+}
+
+.apply-nursing-title-h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #c01313;
+  margin-bottom: 15px;
 }
 
 .apply-nursing-intro {
@@ -111,6 +117,7 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   cursor: pointer;
+  will-change: transform;
 }
 
 .apply-nursing-card h3 {
@@ -135,6 +142,38 @@ body {
 .apply-nursing-card:hover h3,
 .apply-nursing-card:hover p {
   color: #fff;
+}
+
+/* ✅ Non-clickable cards (Step 2 & Step 3) */
+.apply-nursing-card--static {
+  cursor: default;
+}
+
+/* ✅ Floating animation for Step 2 & Step 3 */
+@keyframes gentleFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.apply-nursing-card--float {
+  animation: gentleFloat 4.2s ease-in-out infinite;
+}
+
+/* small stagger so both don't move in sync */
+.apply-nursing-card--float-delay {
+  animation-delay: 0.6s;
+}
+
+/* Keep hover behavior working even while floating */
+.apply-nursing-card--float:hover {
+  animation-play-state: paused;
 }
 
 /* === Note === */
