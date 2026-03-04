@@ -98,13 +98,13 @@ const Services = () => {
                 <p className="service-card-desc">{service.description}</p>
 
                 <div className="service-card-actions">
-                  <button
+                  {/* <button
                     type="button"
                     className="btn-primary"
                     onClick={() => navigate("/contact")}
                   >
                     Request Support
-                  </button>
+                  </button> */}
 
                   {/* <button
                     type="button"

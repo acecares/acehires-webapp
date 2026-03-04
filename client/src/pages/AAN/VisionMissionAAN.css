@@ -3,7 +3,7 @@
   --aan-red: #c40000;
   --aan-blue: #1d439a;
   --aan-dark: #0a3c2f;
-  --ink: #1f2937;
+  --ink: #1d439a;
   --muted: #6b7280;
   --card: #ffffff;
   --bg: #f6f7fb;
@@ -58,7 +58,7 @@
 }
 
 .vm-title-dark {
-  color: var(--aan-dark);
+  color: #000;
 }
 
 .vm-hero-underline {
@@ -102,7 +102,7 @@
 .vm-heading {
   font-size: 26px;
   font-weight: 900;
-  color: var(--aan-dark);
+  color: #1d439a;
   margin: 0 0 6px;
 }
 
