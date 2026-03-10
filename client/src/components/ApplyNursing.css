@@ -124,6 +124,10 @@ body {
   color: #c01313;
   font-weight: 700;
   margin-bottom: 10px;
+   display: inline-block;   /* keeps the box tight to the text */
+  padding: 0.25rem 0.6rem; /* space inside the border */
+  border: 1px solid #333;  /* border color/width */
+  border-radius: 999px;
 }
 
 .apply-nursing-card p {
